@@ -1,0 +1,25 @@
+###detection clic
+##def clic(xclic, yclic, event = "test", nommap = ""):
+##    #detection du fichier de la map
+##    button = "inserer la liste de listes d'audessu"
+##    button = [3, ["buta",[80, 380, 120, 420],0], ["butb",[180, 380, 220, 420],0], ["butc",[280, 380, 320, 420],0]]
+##    nbutton = int(str(button[0]))
+##    i = 1
+##    while i <= nbutton:
+##        clicbutton = button[i]
+##        testcoo = clicbutton[1]
+##        if xclic >= testcoo[0] and xclic <= testcoo[2] and yclic >= testcoo[1] and yclic <= testcoo[3]:
+##            print("clic sur " + clicbutton[0] + " !")
+##            break
+##        else:
+##            print("pas de clic sur " + clicbutton[0])
+##        i += 1
+##    print("fin while")
+##
+##xclic = int(input("xclic"))
+##yclic = int(input("yclic"))
+
+##
+##clic(xclic, yclic)
+##
+##
