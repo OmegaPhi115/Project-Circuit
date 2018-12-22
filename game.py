@@ -20,6 +20,9 @@ C.create_line(100,380,100,320, fill="orange")
 ##                       images\\Patacorn.gif')
 ##C.create_image(0, 0, anchor = "nw", image = tesssssst)
 
+class button():
+    """boutton qui q'allume et qui séteint"""
+
 
 def maploader(nommap):
     """Fonction qui lit du fichier de la map et retranscrit les donées dans des variable"""
