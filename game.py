@@ -50,6 +50,12 @@ class button():
             self.state = 0
         self.graphisme_update()
 
+    def place(self):
+        """place sur la fenetre"""
+        self.button.place(x=self.xPos, y=self.yPos, anchor = "center")
+
+
+
 def maploader(nommap):
     """Fonction qui lit du fichier de la map et retranscrit les donées dans des variable"""
     if nommap == "classique":
