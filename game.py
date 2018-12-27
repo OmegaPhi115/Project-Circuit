@@ -17,11 +17,11 @@ C = Canvas(fen, height = 500, width = 500, bg="green", borderwidth = 0)
 C.place(x = 0,y = 0, anchor = "nw")
 C.create_line(100,380,100,320, fill="orange")
 
-class button():
+class input_button():
     """boutton qui s'allume et qui séteint"""
     def __init__(self, fen_tk, x, y):
         #graphismes
-        self.imgon = PhotoImage(file='images\\button_off.gif')
+        self.imgon = PhotoImage(file='images\\button_on.gif')
         self.imgoff = PhotoImage(file='images\\button_off.gif')
 
         #position
@@ -32,14 +32,14 @@ class button():
         self.state = 0 #off
 
         #créer button
-        self.button = Button(fen_tk, command=clic())
+        self.button_widget = Button(fen_tk, command=self.clic())
 
     def graphisme_update(self):
         """mise a jour des graphismes"""
         if self.state == 0:
-            self.button.configure(image = self.imgoff)
+            self.button_widget.configure(image = self.imgoff)
         else:
-            self.button.configure(image = self.imgoff)
+            self.button_widget.configure(image = self.imgon)
         fen_graphic_update()
 
     def clic (self):
@@ -52,7 +52,7 @@ class button():
 
     def place(self):
         """place sur la fenetre"""
-        self.button.place(x=self.xPos, y=self.yPos, anchor = "center")
+        self.button_widget.place(x=self.xPos, y=self.yPos, anchor = "center")
 
 
 
@@ -121,8 +121,8 @@ def graphic ():
                 C.create_line(300,380,300,320, fill="blue")
         i = i + 1
 
-buttona = Button(fen, command= lambda: clic("buta"))
-buttona.place(x=100, y=400, anchor = "center")
+buttona = input_button(fen,100,400)
+buttona.place()
 buttonb = Button(fen, command= lambda: clic("butb"))
 buttonb.place(x=200, y=400, anchor = "center")
 buttonc = Button(fen, command= lambda: clic("butc"))
