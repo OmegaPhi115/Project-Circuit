@@ -16,13 +16,39 @@ photobuttonc = 0
 C = Canvas(fen, height = 500, width = 500, bg="green", borderwidth = 0)
 C.place(x = 0,y = 0, anchor = "nw")
 C.create_line(100,380,100,320, fill="orange")
-##tesssssst = PhotoImage(file='
-##                       images\\Patacorn.gif')
-##C.create_image(0, 0, anchor = "nw", image = tesssssst)
 
 class button():
-    """boutton qui q'allume et qui séteint"""
+    """boutton qui s'allume et qui séteint"""
+    def __init__(self, fen_tk, x, y):
+        #graphismes
+        self.imgon = PhotoImage(file='images\\button_off.gif')
+        self.imgoff = PhotoImage(file='images\\button_off.gif')
 
+        #position
+        self.xPos = x
+        self.yPos = y
+
+        #logique
+        self.state = 0 #off
+
+        #créer button
+        self.button = Button(fen_tk, command=clic())
+
+    def graphisme_update(self):
+        """mise a jour des graphismes"""
+        if self.state == 0:
+            self.button.configure(image = self.imgoff)
+        else:
+            self.button.configure(image = self.imgoff)
+        fen_graphic_update()
+
+    def clic (self):
+        """action quand button cliquer"""
+        if self.state == 0:
+            self.state = 1
+        else:
+            self.state = 0
+        self.graphisme_update()
 
 def maploader(nommap):
     """Fonction qui lit du fichier de la map et retranscrit les donées dans des variable"""
@@ -101,6 +127,7 @@ x = 100
 y = 300
 
 def circuitalea():
+    """choisi operation au hazard"""
     a = ["or", "nor", "and", "nand", "xor", "xnor"]
     i = random.choice(a)
     if i == "or":
@@ -118,6 +145,13 @@ def circuitalea():
 
 def fermer():
     a = 0 / 0
+
+def fen_graphic_update():
+    try:
+        self.tk.update_idletasks()
+        self.tk.update()
+    except TclError:
+        pass
 
 photoa = PhotoImage(file=circuitalea())
 G1 = Button(fen, image=photoa)
