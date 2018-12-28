@@ -17,6 +17,13 @@ C = Canvas(fen, height = 500, width = 500, bg="green", borderwidth = 0)
 C.place(x = 0,y = 0, anchor = "nw")
 C.create_line(100,380,100,320, fill="orange")
 
+def fen_graphic_update():
+    try:
+        fen.update_idletasks()
+        fen.update()
+    except TclError:
+        pass
+
 class input_button():
     """boutton qui s'allume et qui séteint"""
     def __init__(self, fen_tk, x, y):
@@ -33,14 +40,17 @@ class input_button():
 
         #créer button
         self.button_widget = Button(fen_tk, command=self.clic())
+        self.place()
         self.graphisme_update()
 
     def graphisme_update(self):
         """mise a jour des graphismes"""
         if self.state == 0:
-            self.button_widget.configure(image = self.imgoff)
+            #self.button_widget.configure(image = self.imgoff)
+            print("off")
         else:
-            self.button_widget.configure(image = self.imgon)
+            #self.button_widget.configure(image = self.imgon)
+            print("on")
         fen_graphic_update()
 
     def clic (self):
@@ -152,13 +162,6 @@ def circuitalea():
 
 def fermer():
     a = 0 / 0
-
-def fen_graphic_update():
-    try:
-        self.tk.update_idletasks()
-        self.tk.update()
-    except TclError:
-        pass
 
 photoa = PhotoImage(file=circuitalea())
 G1 = Button(fen, image=photoa)
