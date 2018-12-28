@@ -1,2 +1,3 @@
 # Project-Circuit
-vvvvv
+WIP
+Logic game with circuit
