@@ -33,6 +33,7 @@ class input_button():
 
         #créer button
         self.button_widget = Button(fen_tk, command=self.clic())
+        self.graphisme_update()
 
     def graphisme_update(self):
         """mise a jour des graphismes"""
