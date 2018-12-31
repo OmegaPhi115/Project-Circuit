@@ -25,8 +25,9 @@ def fen_graphic_update():
         pass
 
 class input_button():
-    """boutton qui s'allume et qui séteint"""
+    """boutton D'entrée"""
     def __init__(self, fen_tk, x, y):
+        import tkinter
         #graphismes
         self.imgon = PhotoImage(file='images\\button_on.gif')
         self.imgoff = PhotoImage(file='images\\button_off.gif')
@@ -36,29 +37,37 @@ class input_button():
         self.yPos = y
 
         #logique
-        self.state = 0 #off
+        self.state = "on" #off
 
         #créer button
-        self.button_widget = Button(fen_tk, command=self.clic())
+        try:
+            self.button_widget = Button(fen_tk, command=self.clic())
+        except:
+            print("that button is not init ôwô")
         self.place()
         self.graphisme_update()
 
     def graphisme_update(self):
         """mise a jour des graphismes"""
-        if self.state == 0:
-            #self.button_widget.configure(image = self.imgoff)
+        print("jifdjiodj" + str(self.state))
+        if self.state == "off":
+            print("here 1")
+            self.button_widget.configure(self, image = self.imgoff)
             print("off")
-        else:
-            #self.button_widget.configure(image = self.imgon)
+        elif self.state == "on":
+            print("here 2")
+            self.button_widget.configure(self, image = self.imgon)
             print("on")
         fen_graphic_update()
 
-    def clic (self):
+    def clic(self):
         """action quand button cliquer"""
-        if self.state == 0:
-            self.state = 1
+        if self.state == "off":
+            self.state = "on"
+        elif self.state == "on":
+            self.state = "off"
         else:
-            self.state = 0
+            print("Invalid state Line 69 (>_<)")
         self.graphisme_update()
 
     def place(self):
@@ -103,34 +112,34 @@ def clic(nombutton):
 imgoff = PhotoImage(file='images\\button_off.gif')
 imgon = PhotoImage(file='images\\button_on.gif')
 #fonction responssable de changer les images
-def graphic ():
-    i = 1
-    #imgtampon = PhotoImage(file='images\\Patacorn.gif')  test
-    #changement des images des bouttons
-    while i <= buttonindex[0]:
-        if buttonindex[i][0] == "buta":
-            if buttonindex[i][2] == 0:
-                buttona.configure(image=imgoff)
-                C.create_line(100,380,100,320, fill="orange")
-            if buttonindex[i][2] == 1:
-                buttona.configure(image=imgon)
-                C.create_line(100,380,100,320, fill="blue")
-
-        if buttonindex[i][0] == "butb":
-            if buttonindex[i][2] == 0:
-                buttonb.configure(image=imgoff)
-                C.create_line(200,380,200,300,140,300, fill="orange")
-            if buttonindex[i][2] == 1:
-                buttonb.configure(image=imgon)
-
-        if buttonindex[i][0] == "butc":
-            if buttonindex[i][2] == 0:
-                buttonc.configure(image=imgoff)
-                C.create_line(300,380,300,320, fill="orange")
-            if buttonindex[i][2] == 1:
-                buttonc.configure(image=imgon)
-                C.create_line(300,380,300,320, fill="blue")
-        i = i + 1
+##def graphic ():
+##    i = 1
+##    #imgtampon = PhotoImage(file='images\\Patacorn.gif')  test
+##    #changement des images des bouttons
+##    while i <= buttonindex[0]:
+##        if buttonindex[i][0] == "buta":
+##            if buttonindex[i][2] == 0:
+##                buttona.configure(image=imgoff)
+##                C.create_line(100,380,100,320, fill="orange")
+##            if buttonindex[i][2] == 1:
+##                buttona.configure(image=imgon)
+##                C.create_line(100,380,100,320, fill="blue")
+##
+##        if buttonindex[i][0] == "butb":
+##            if buttonindex[i][2] == 0:
+##                buttonb.configure(image=imgoff)
+##                C.create_line(200,380,200,300,140,300, fill="orange")
+##            if buttonindex[i][2] == 1:
+##                buttonb.configure(image=imgon)
+##
+##        if buttonindex[i][0] == "butc":
+##            if buttonindex[i][2] == 0:
+##                buttonc.configure(image=imgoff)
+##                C.create_line(300,380,300,320, fill="orange")
+##            if buttonindex[i][2] == 1:
+##                buttonc.configure(image=imgon)
+##                C.create_line(300,380,300,320, fill="blue")
+##        i = i + 1
 
 buttona = input_button(fen,100,400)
 buttona.place()
@@ -138,7 +147,7 @@ buttonb = Button(fen, command= lambda: clic("butb"))
 buttonb.place(x=200, y=400, anchor = "center")
 buttonc = Button(fen, command= lambda: clic("butc"))
 buttonc.place(x=300, y=400, anchor = "center")
-graphic()
+#graphic()
 
 x = 100
 y = 300
@@ -178,6 +187,6 @@ G3 = Button(fen, image=photoc)
 G3.place(x = x,y = y, anchor = "center")
 
 #end
-graphic()
+#graphic()
 fen.mainloop()
 
