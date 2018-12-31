@@ -27,7 +27,6 @@ def fen_graphic_update():
 class input_button():
     """boutton D'entrée"""
     def __init__(self, fen_tk, x, y):
-        import tkinter
         #graphismes
         self.imgon = PhotoImage(file='images\\button_on.gif')
         self.imgoff = PhotoImage(file='images\\button_off.gif')
@@ -41,11 +40,14 @@ class input_button():
 
         #créer button
         try:
-            self.button_widget = Button(fen_tk, command=self.clic())
+            self.button_widget = Button(fen)
         except:
-            print("that button is not init ôwô")
+            print("Error: button is not init !")
+        print("It's NOT over")
         self.place()
+        print("T'ill it's over")
         self.graphisme_update()
+        print("WUB WUB WUB")
 
     def graphisme_update(self):
         """mise a jour des graphismes"""
@@ -74,8 +76,6 @@ class input_button():
         """place sur la fenetre"""
         self.button_widget.place(x=self.xPos, y=self.yPos, anchor = "center")
 
-
-
 def maploader(nommap):
     """Fonction qui lit du fichier de la map et retranscrit les donées dans des variable"""
     if nommap == "classique":
@@ -96,7 +96,6 @@ def test(a = ""):
     print (a)
 
 def clic(nombutton):
-
     i = 1
     while i <= buttonindex[0]:
         if buttonindex[i][0] == nombutton:
@@ -148,6 +147,7 @@ buttonb.place(x=200, y=400, anchor = "center")
 buttonc = Button(fen, command= lambda: clic("butc"))
 buttonc.place(x=300, y=400, anchor = "center")
 #graphic()
+fff = Button()
 
 x = 100
 y = 300
