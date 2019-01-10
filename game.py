@@ -1,9 +1,9 @@
-from tkinter import *
+import tkinter as tk
 from math import *
 import random
 
 #initialisation fenetre
-fen = Tk()
+fen = tk.Tk()
 fen.geometry("400x500")
 fen.title("Projet Circuits")
 fen.rowconfigure(0, weight=1)
@@ -13,7 +13,7 @@ photobuttona = 0
 photobuttonb = 0
 photobuttonc = 0
 
-C = Canvas(fen, height = 500, width = 500, bg="green", borderwidth = 0)
+C = tk.Canvas(fen, height = 500, width = 500, bg="green", borderwidth = 0)
 C.place(x = 0,y = 0, anchor = "nw")
 C.create_line(100,380,100,320, fill="orange")
 
@@ -28,8 +28,11 @@ class input_button():
     """boutton D'entrée"""
     def __init__(self, fen_tk, x, y):
         #graphismes
-        self.imgon = PhotoImage(file='images\\button_on.gif')
-        self.imgoff = PhotoImage(file='images\\button_off.gif')
+        try:
+            self.imgon = PhotoImage(file="images\\OR.gif")
+            self.imgoff = PhotoImage(file="images\\OR.gif")
+        except:
+            print("Error: image is not init !")
 
         #position
         self.xPos = x
@@ -69,7 +72,7 @@ class input_button():
         elif self.state == "on":
             self.state = "off"
         else:
-            print("Invalid state Line 69 (>_<)")
+            print("Invalid state Line 75 (>_<)")
         self.graphisme_update()
 
     def place(self):
@@ -108,8 +111,8 @@ def clic(nombutton):
             break
         i += 1
 
-imgoff = PhotoImage(file='images\\button_off.gif')
-imgon = PhotoImage(file='images\\button_on.gif')
+#imgoff = PhotoImage(file='images\\button_off.gif')
+#imgon = PhotoImage(file='images\\button_on.gif')
 #fonction responssable de changer les images
 ##def graphic ():
 ##    i = 1
