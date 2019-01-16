@@ -52,3 +52,5 @@ class input_button():
     def place(self):
         """place sur la fenetre"""
         self.button_widget.place(x=self.xPos, y=self.yPos, anchor = "center")
+
+
