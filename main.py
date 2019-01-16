@@ -13,7 +13,6 @@ fenetre_principale.columnconfigure(0, weight=1)
 #On crée l'arierre plan sur la fenetre pricipale
 C = tk.Canvas(fenetre_principale, height = 500, width = 500, bg="green", borderwidth = 0)
 C.place(x = 0,y = 0, anchor = "nw")
-C.create_line(100,380,100,320, fill="orange")
 
 #Mainloop
 def mainloop():
