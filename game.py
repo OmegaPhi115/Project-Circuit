@@ -1,3 +1,4 @@
+#transferre sur main.py
 import tkinter as tk
 from math import *
 import random
