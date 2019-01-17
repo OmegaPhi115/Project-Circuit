@@ -15,8 +15,9 @@ C = tk.Canvas(fenetre_principale, height = 500, width = 500, bg="green", borderw
 C.place(x = 0,y = 0, anchor = "nw")
 
 #Mainloop
-def mainloop():
-    """mainloop du programe"""
+def Refresh():
+    """Refresh du programe"""
     fenetre_principale.update_idletasks()
     fenetre_principale.update()
-mainloop()
+while 1:
+    Refresh()
