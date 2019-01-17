@@ -17,38 +17,26 @@
 #
 #-------------------------------------------------------
 
+import Circuit_lib.Logic as Logic
+import Circuit_lib.Entry_check as entry_check
+
 class circuit():
 	"""class du circuit a lecran"""
+	#debut entry_check
 
-		#debut entry_check
-		class entry_check():
-			"""Regarde si les entrées sont valide sinon erreur: OperationError"""
-			class OperationError():
-				"""Erreur D'entrée d'operation logique"""
-				def __init__(self, wrong_operation):
-					print("Erreur D'entrée d'operation logique")
-					print(str(wrong_operation) + " n'est pas une entrée correcte")
-
-			def operation(op):
-				if op != "or", "and", "xor", "nor", "nand", "nxor":
-					raise OperationError
-			
-			def entry(a):
-				#entrées
-				pass
 		#fin entry_check
 
-		def logic(opera, a, b):
-			#on regarde si les entreées sont bonne
-			mod_entry_check = self.entry_check()
-			opera = mod_entry_check.operation(opera)
-			a = mod_entry_check.entry(a)
-			b = mod_entry_check.entry(b)
-		
-			#quelle est l'operation ? la faire et la metre dans outpu
+	def logic(opera, a, b):
+		#on regarde si les entreées sont bonnes
+		mod_entry_check = entry_check()
+		opera = mod_entry_check.operation(opera)
+		a = mod_entry_check.entry(a)
+		b = mod_entry_check.entry(b)
 
-			#on rend outpu
-			return outpu
+		#quelle est l'operation ? la faire et la metre dans outpu
+
+		#on rend outpu
+		#return outpu
 
 
 	def __init__(self):
@@ -57,13 +45,15 @@ class circuit():
 		self.entry_a = "init"
 		self.entry_b = "init"
 		self.output = "init"
-		self.logic_mod = logic()
-	
-	def value_refresh(self, a, b:
+		self.logic_mod = Logic()
+
+	def value_refresh(self, a, b):
 		self.entry_a = a
 		self.entry_b = b
-		self.output = o
-	
+		#self.output = o
+
 	def configure(self, operation = "null"):
 		if operation != "null":
 			self.operation = operation
+
+test = circuit()
