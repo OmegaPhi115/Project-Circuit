@@ -1,2 +1,3 @@
-import no.function_nested as fun
-fun.who_am_i()
+import time
+import no.function_nested
+hhh.ddd()
