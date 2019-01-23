@@ -2,6 +2,7 @@
 import tkinter as tk
 import math
 import random
+#import
 
 #On crée la fennetre principale
 fenetre_principale = tk.Tk()
