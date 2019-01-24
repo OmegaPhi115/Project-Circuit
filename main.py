@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream
+#<<<<<<< Updated upstream
 #inports||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 import tkinter as tk
 import math
