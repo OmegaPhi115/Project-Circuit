@@ -4,19 +4,31 @@ class Main():
 		"""Erreur D'entrée d'operation logique"""
 		def __init__(self, wrong_operation):
 			print("Erreur D'entrée d'operation logique")
-			print(str(wrong_operation) + " n'est pas une entrée correcte")
+			print("")
+			if wrong_operation != "Operation Variable not set":
+				print(str(wrong_operation) + " n'est pas une entrée correcte")
+			else:
+				print("La variable d'operation n'est pas initialisée")
+
+	def operation(self, op):
+		#print("uhliuhouihmo!" + op)
+		if op != "or" and op != "and" and op != "xor" and op != "nor" and op != "nand" and op != "xnor":
+			if op == "init":
+				op = "Operation Variable Not Set"
+			raise self.OperationError(op)
 	
-	class ValueError(Exception):
+	class EntryError(Exception):
 		"""Erreur D'entrée d'operation logique"""
 		def __init__(self, wrong_operation):
 			print("Erreur D'entrée d'operation logique")
-			print(str(wrong_operation) + " n'est pas une entrée correcte, doit etre True ou False")
-
-	def operation(self, op):
-		if op != "or" or "and" or "xor" or "nor" or "nand" or "nxor":
-			raise self.OperationError(op)
+			print("")
+			print(str(wrong_operation) + " n'est pas une entrée correcte, doit etre 1 ou 0")
 
 	def entry(self, a):
 		#entrées
-		if a != True or False:
-			raise self.ValueError(a)
+		#print("test")
+		#print(a)
+	
+		a = int(a)
+		if a != 1 and a != 0:
+			raise self.EntryError(a)
