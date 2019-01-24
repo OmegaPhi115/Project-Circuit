@@ -1,5 +1,5 @@
 #------------------------------------------------------
-# V 0.6.1
+# V 0.7.1
 # Description: Objet des circuit logiques a l'ecran
 #------------------------------------------------------
 #plan:
@@ -21,37 +21,45 @@ import Logic as Logic
 import Entry_check as entry_check
 
 class circuit():
-	"""class du circuit a lecran"""
-	#debut entry_check
+	"""class du circuit a l'écran"""
 
-		#fin entry_check
+	def __init__(self):
+		#declaration variable
+		self.operation = "Operation Variable not set"
 
-	def logic(self, opera, a, b):
+	def logic(self, a, b, opera = "null"):
 		#on regarde si les entreées sont bonnes
+		if opera == "null" or "":
+			opera = self.operation
+		else:
+			self.operation = opera
+
 		mod_entry_check = entry_check.Main()## je suis main()
 		mod_entry_check.operation(opera)
 		mod_entry_check.entry(a)
 		mod_entry_check.entry(b)
 
+		module_logic = Logic.Main()
 		#quelle est l'operation ? la faire et la metre dans outpu
+		if opera == "and":
+			outpu = module_logic.AND(a,b)
+		elif opera == "or":
+			outpu = module_logic.OR(a,b)
+		elif opera == "xor":
+			outpu = module_logic.XOR(a,b)
+		elif opera == "nand":
+			outpu = module_logic.NAND(a,b)
+		elif opera == "nor":
+			outpu = module_logic.NOR(a,b)
+		elif opera == "xnor":
+			outpu = module_logic.XNOR(a,b)
+		else:
+			outpu = "impossible"
 
 		#on rend outpu
-		#return outpu
+		self.output = outpu
+		return outpu
 
-
-	def __init__(self):
-		#declaration variable
-		self.operation = "init"
-		self.entry_a = "init"
-		self.entry_b = "init"
-		self.output = "init"
-		self.logic_mod = Logic.Main()
-
-	def value_refresh(self, a, b):
-		self.entry_a = a
-		self.entry_b = b
-		#self.output = o
-
-	def configure(self, operation = "null"):
-		if operation != "null":
-			self.operation = operation
+def test():
+	test = circuit()
+	print(test.logic(input("a"), input("b"), input("")))
