@@ -22,9 +22,6 @@ import Entry_check as entry_check
 
 class circuit():
 	"""class du circuit a lecran"""
-	#debut entry_check
-
-		#fin entry_check
 
 	def logic(self, opera, a, b):
 		#on regarde si les entreées sont bonnes
