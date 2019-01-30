@@ -1,10 +1,11 @@
+import tkinter
 class input_button():
     """boutton D'entrée"""
     def __init__(self, fen_tk, x, y):
         #graphismes
         try:
-            self.imgon = PhotoImage(file="images\\OR.gif")
-            self.imgoff = PhotoImage(file="images\\OR.gif")
+            self.imgon = "Ressources\\Graphique\\button_on.gif"
+            self.imgoff = "Ressources\\Graphique\\button_off.gif"
         except:
             print("Error: image is not init !")
 
@@ -48,4 +49,5 @@ class input_button():
         """place sur la fenetre"""
         self.button_widget.place(x=self.xPos, y=self.yPos, anchor = "center")
 
-
+fen = Tk()
+a = input_button()
