@@ -1,4 +1,5 @@
 import tkinter
+eioexzj = Tk()
 class input_button():
     """boutton D'entrée"""
     def __init__(self, fen_tk, x, y):
@@ -49,5 +50,44 @@ class input_button():
         """place sur la fenetre"""
         self.button_widget.place(x=self.xPos, y=self.yPos, anchor = "center")
 
-fen = Tk()
-a = input_button()
+class butto():
+	"""
+	Classe du button 2.0
+	"""
+	def __init__(self):
+		self.state = "off"
+		
+	
+	def clic(self, debug = False):
+		"""
+		Action quand le button est cliquer
+		"""
+		if self.state == "off":
+			self.state = "on"
+		elif self.state == "on":
+			self.state = "off"
+		if debug == True:
+			print("butto.clic().state = " + str(self.state))
+		self.graphisme_update()
+
+	def graphisme_update(self):
+			"""
+			Actualisation des graphismes
+			"""
+			if self.state == "off":
+					#it's off
+					print("off")
+			elif self.state == "on":
+					#it's on
+					print("on")
+			#actualiser la fenetre
+	
+	def test(self):
+		#test de clic
+		self.clic(debug = True)
+		self.clic(debug = True)
+		print()
+
+
+a = butto()
+a.test()
