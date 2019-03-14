@@ -4,8 +4,6 @@ solution: touches 1 2 3
 """
 #TODO classe circuit
 
-
-
 #imports
 import pygame
 from pygame.locals import *
@@ -175,4 +173,3 @@ while Launched:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             Launched = False
-#test
