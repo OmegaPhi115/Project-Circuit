@@ -2,6 +2,9 @@
 Probleme: pas de boutons interactifs
 solution:   hit box de clic
             touches 1 2 3
+
+probleme: apararition des images sur le coin superieure gauche
+solution: ~~~
 """
 #TODO classe circuit
 
@@ -11,13 +14,65 @@ from pygame.locals import *
 
 #creation surface
 pygame.init()
-window_resolution = (550, 600)  #resolution de la surface en pixls (tupple)
+window_resolution = (500, 500)  #resolution de la surface en pixls (tupple)
 window_game = pygame.display.set_mode(window_resolution)
 
 
-#class Boutton:
-#    #TODO boutton
-#    pass
+class Boutton:
+        """boutton D'entrée"""
+    def __init__(self, x, y):
+        #graphismes
+        try:
+            #TODO Constante
+            pass
+            #self.imgon = "button_on.gif"
+            #self.imgoff = "Ressources\\Graphique\\button_off.gif"
+        except:
+            print("Error: image is not init !")
+
+        #position
+        self.xPos = x
+        self.yPos = y
+
+        #logique
+        self.state = "on" #off
+
+        #créer button
+        try:
+            self.button_widget = Button(fen)
+        except:
+            print("Error: button is not init !")
+        self.place()
+        self.graphisme_update()
+
+    def graphisme_update(self):
+        #TODO modifier graphisme
+        """mise a jour des graphismes"""
+        print("jifdjiodj" + str(self.state))
+        if self.state == "off":
+            print("here 1")
+            self.button_widget.configure(self, image = self.imgoff)
+            print("off")
+        elif self.state == "on":
+            print("here 2")
+            self.button_widget.configure(self, image = self.imgon)
+            print("on")
+        fen_graphic_update()
+
+    def test_clic(self, x_clic, y_clic):
+        clicker()
+
+    def clicker(self):
+        """action quand button cliquer"""
+        if self.state == "off":
+            self.state = "on"
+        elif self.state == "on":
+            self.state = "off"
+        self.graphisme_update()
+
+    def placer(self):
+        """place sur la fenetre"""
+        window_game.blit(self.image, (self.x, self.y))
 
 
 class Circuit:
@@ -77,7 +132,7 @@ class Circuit:
             else:
                 return False
 
-        def OR(self, a, b):  # ordroid
+        def OR(self, a, b):   # ordroid
             if a + b >= 1:
                 return True
             else:
@@ -154,8 +209,8 @@ class Circuit:
         self.placer
 
 
-fond = pygame.image.load("patacorn_by_justpatacorn-dbvwznm.jpg").convert()
-window_game.blit(fond, (0,0))
+#fond = pygame.image.load("patacorn_by_justpatacorn-dbvwznm.jpg").convert()
+#window_game.blit(fond, (0,0))
 
 
 #!!!!!!!!!!! les images sont placées sur le coin superieur gauche !!!!!!!!!!!!!!
@@ -173,8 +228,18 @@ circuitc.placer()
 pygame.display.flip()
 #mainloop
 Launched = True
+ctrl = 0
 while Launched:
     pygame.time.Clock().tick(30)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             Launched = False
+
+        if event.type == KEYDOWN and event.key == K_RCTRL:
+            ctrl = ctrl + 1
+            print(ctrl)
+            if ctrl == 5:
+                Launched = False
+            elif event.type == KEYDOWN and event.key != K_RCTRL:
+                print("oui ca passe par la")
+                ctrl = 0
