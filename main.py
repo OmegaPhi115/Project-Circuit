@@ -1,6 +1,7 @@
 """
 Probleme: pas de boutons interactifs
-solution: touches 1 2 3
+solution:   hit box de clic
+            touches 1 2 3
 """
 #TODO classe circuit
 
@@ -156,13 +157,17 @@ class Circuit:
 fond = pygame.image.load("patacorn_by_justpatacorn-dbvwznm.jpg").convert()
 window_game.blit(fond, (0,0))
 
+
+#!!!!!!!!!!! les images sont placées sur le coin superieur gauche !!!!!!!!!!!!!!
+#-> a fixer
+
 circuita = Circuit(100, 300, "OR")
 circuita.placer()
 
-circuitb = Circuit(100 + 200, 300, "OR")
+circuitb = Circuit(300, 300, "OR")
 circuitb.placer()
 
-circuitc = Circuit(100+100, 300-100, "OR")
+circuitc = Circuit(200, 200, "OR")
 circuitc.placer()
 
 pygame.display.flip()
