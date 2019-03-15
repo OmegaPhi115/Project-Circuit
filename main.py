@@ -5,62 +5,58 @@ solution:   hit box de clic
 
 probleme: apararition des images sur le coin superieure gauche
 solution: ~~~
-"""
-#TODO classe circuit
 
-#imports
+probleme: circuit pas aligner
+solution: refaire le sprite car il est pourit
+"""
+# imports
 import pygame
 from pygame.locals import *
+from Constantes import *
 
-#creation surface
+# creation surface
 pygame.init()
-window_resolution = (500, 500)  #resolution de la surface en pixls (tupple)
+window_resolution = (500, 500)  # resolution de la surface en pixls (tupple)
 window_game = pygame.display.set_mode(window_resolution)
 
 
 class Boutton:
-        """boutton D'entrée"""
+    """boutton D'entrée"""
     def __init__(self, x, y):
-        #graphismes
-        try:
-            #TODO Constante
-            pass
-            #self.imgon = "button_on.gif"
-            #self.imgoff = "Ressources\\Graphique\\button_off.gif"
-        except:
-            print("Error: image is not init !")
-
-        #position
+        # position
         self.xPos = x
         self.yPos = y
 
-        #logique
-        self.state = "on" #off
+        # hitbox:
+        self.hitbox_xa = self.xPos  # |                                 a-----|
+        self.hitbox_ya = self.yPos  # |                                 |     |
+        # |                                                             |     |
+        self.hitbox_xb = img_button_taille_x + self.xPos  # |           |     |
+        self.hitbox_yb = img_button_taille_y + self.yPos  # |           |-----b
 
-        #créer button
-        try:
-            self.button_widget = Button(fen)
-        except:
-            print("Error: button is not init !")
-        self.place()
+        # grafique:
+        self.current_image = "none"
+
+        # logique
+        self.state = "off"
+
         self.graphisme_update()
 
     def graphisme_update(self):
         #TODO modifier graphisme
         """mise a jour des graphismes"""
-        print("jifdjiodj" + str(self.state))
         if self.state == "off":
-            print("here 1")
-            self.button_widget.configure(self, image = self.imgoff)
-            print("off")
+            self.current_image = pygame.image.load(img_button_OFF).convert_alpha()
         elif self.state == "on":
-            print("here 2")
-            self.button_widget.configure(self, image = self.imgon)
-            print("on")
-        fen_graphic_update()
+            self.current_image = pygame.image.load(img_button_ON).convert_alpha()
 
-    def test_clic(self, x_clic, y_clic):
-        clicker()
+    def tester_clic(self, x_clic, y_clic):
+        if x_clic > self.hitbox_xa:
+            if y_clic > self.hitbox_ya:
+                # coin [a] verifié
+                if x_clic < self.hitbox_xb:
+                    if y_clic < self.hitbox_yb:
+                        self.clicker()
 
     def clicker(self):
         """action quand button cliquer"""
@@ -72,7 +68,17 @@ class Boutton:
 
     def placer(self):
         """place sur la fenetre"""
-        window_game.blit(self.image, (self.x, self.y))
+        window_game.blit(self.current_image, (self.xPos, self.yPos))
+
+    def update(self, x_clic, y_clic):
+        """
+        update le bouton
+        1) gestion clic
+        2) on place
+        """
+        self.tester_clic(x_clic, y_clic)
+        self.placer()
+
 
 
 class Circuit:
@@ -83,6 +89,9 @@ class Circuit:
         self.x = x
         self.y = y
         self.operation = ope
+        self.image = "not init"
+        self.output = 0
+
         self.changer_image()
 
     class Circuit_Entry_Checker:
@@ -161,12 +170,13 @@ class Circuit:
         else:
             self.operation = opera
 
-        mod_entry_check = Circuit_Entry_Checker()  ## je suis main()
+        mod_entry_check = self.Circuit_Entry_Checker()  # je suis main()
         mod_entry_check.operation(opera)
         mod_entry_check.entry(a)
         mod_entry_check.entry(b)
 
-        module_logic = Circuit_Logic_operateur()
+        module_logic = self.Circuit_Logic_operateur()
+
         # quelle est l'operation ? la faire et la metre dans outpu
         if opera == "and":
             outpu = module_logic.AND(a, b)
@@ -193,28 +203,45 @@ class Circuit:
         self.placer()
 
     def changer_operation(self, ope):
+        """change l'operation par entré"""
         self.operation = ope
         self.changer_image()
 
     def changer_image(self):
-        self.image = pygame.image.load("OR.png").convert_alpha()
+        """Change l'image en raport avec l'operation"""
+        # todo change image operation
+        self.image = pygame.image.load(img_circuit_OR).convert_alpha()
 
     def placer(self):
+        """Placer sur la surface"""
         xy_coord = (self.x, self.y)
         window_game.blit(self.image, xy_coord)
 
     def actualiser(self):
-        #TODO lire nput de bouton
-        #self.logic()
+        """actualisation"""
+        # TODO lire nput de bouton
+        # self.logic()
         self.placer
 
 
-#fond = pygame.image.load("patacorn_by_justpatacorn-dbvwznm.jpg").convert()
-#window_game.blit(fond, (0,0))
+# fond = pygame.image.load("patacorn_by_justpatacorn-dbvwznm.jpg").convert()
+# window_game.blit(fond, (0,0))
+
+# !!!!!!!!!!! les images sont placées sur le coin superieur gauche !!!!!!!!!!!!!!
+# -> a fixer
 
 
-#!!!!!!!!!!! les images sont placées sur le coin superieur gauche !!!!!!!!!!!!!!
-#-> a fixer
+boutona = Boutton(100,400)
+boutona.placer()
+
+boutonb = Boutton(200,400)
+boutonb.placer()
+
+boutonc = Boutton(300,400)
+boutonc.placer()
+
+boutond = Boutton(400,400)
+boutond.placer()
 
 circuita = Circuit(100, 300, "OR")
 circuita.placer()
@@ -225,21 +252,19 @@ circuitb.placer()
 circuitc = Circuit(200, 200, "OR")
 circuitc.placer()
 
-pygame.display.flip()
-#mainloop
+
+# mainloop
 Launched = True
 ctrl = 0
 while Launched:
+    pygame.display.flip()
     pygame.time.Clock().tick(30)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             Launched = False
 
-        if event.type == KEYDOWN and event.key == K_RCTRL:
-            ctrl = ctrl + 1
-            print(ctrl)
-            if ctrl == 5:
-                Launched = False
-            elif event.type == KEYDOWN and event.key != K_RCTRL:
-                print("oui ca passe par la")
-                ctrl = 0
+        if event.type == MOUSEBUTTONDOWN and event.button == 1:
+            boutona.update(event.pos[0], event.pos[1])
+            boutonb.update(event.pos[0], event.pos[1])
+            boutonc.update(event.pos[0], event.pos[1])
+            boutond.update(event.pos[0], event.pos[1])
