@@ -8,7 +8,15 @@ solution: ~~~
 
 probleme: circuit pas aligner
 solution: refaire le sprite car il est pourit
+
+map generation:
+bouton = [[x, y], ...]
+circuit = #bas gauche premier, hautdroite dernier [(x, y), ...]
 """
+map_bouton = [[100, 400], [200, 400], [300, 400], [400, 400]]
+map_circuit = [[100, 300], [300, 300], [200, 200]]
+output = []
+
 # imports
 import pygame
 from pygame.locals import *
@@ -38,16 +46,16 @@ class Boutton:
         self.current_image = "none"
 
         # logique
-        self.state = "off"
+        self.state = 0
 
         self.graphisme_update()
 
     def graphisme_update(self):
         #TODO modifier graphisme
         """mise a jour des graphismes"""
-        if self.state == "off":
+        if self.state == 0:
             self.current_image = pygame.image.load(img_button_OFF).convert_alpha()
-        elif self.state == "on":
+        elif self.state == 1:
             self.current_image = pygame.image.load(img_button_ON).convert_alpha()
 
     def tester_clic(self, x_clic, y_clic):
@@ -60,35 +68,32 @@ class Boutton:
 
     def clicker(self):
         """action quand button cliquer"""
-        if self.state == "off":
-            self.state = "on"
-        elif self.state == "on":
-            self.state = "off"
+        if self.state == 0:
+            self.state = 1
+        elif self.state == 1:
+            self.state = 0
         self.graphisme_update()
 
     def placer(self):
         """place sur la fenetre"""
         window_game.blit(self.current_image, (self.xPos, self.yPos))
 
-    def update(self, x_clic, y_clic):
+    def update(self):
         """
         update le bouton
-        1) gestion clic
-        2) on place
+        on le place
         """
-        self.tester_clic(x_clic, y_clic)
         self.placer()
-
 
 
 class Circuit:
     """
     Class finale de circuit
     """
-    def __init__(self, x, y, ope):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.operation = ope
+        self.operation = "or"
         self.image = "not init"
         self.output = 0
 
@@ -162,13 +167,10 @@ class Circuit:
         def XNOR(self, a, b):  # xnordroid
             return not (self.XOR(a, b))
 
-    def logic(self, a, b, opera="null"):
+    def logic(self, a, b):
         """s'ocupe d'effectuer le calcule"""
         # on regarde si les entrées sont bonnes
-        if opera == "null" or "":
-            opera = self.operation
-        else:
-            self.operation = opera
+        opera = self.operation
 
         mod_entry_check = self.Circuit_Entry_Checker()  # je suis main()
         mod_entry_check.operation(opera)
@@ -178,6 +180,7 @@ class Circuit:
         module_logic = self.Circuit_Logic_operateur()
 
         # quelle est l'operation ? la faire et la metre dans outpu
+        outpu = 0
         if opera == "and":
             outpu = module_logic.AND(a, b)
         elif opera == "or":
@@ -190,8 +193,11 @@ class Circuit:
             outpu = module_logic.NOR(a, b)
         elif opera == "xnor":
             outpu = module_logic.XNOR(a, b)
+
+        if outpu:
+            outpu = 1
         else:
-            outpu = "impossible"
+            outpu = 0
 
         # on rend outpu
         self.output = outpu
@@ -217,10 +223,8 @@ class Circuit:
         xy_coord = (self.x, self.y)
         window_game.blit(self.image, xy_coord)
 
-    def actualiser(self):
+    def update(self):
         """actualisation"""
-        # TODO lire nput de bouton
-        # self.logic()
         self.placer
 
 
@@ -229,28 +233,24 @@ class Circuit:
 
 # !!!!!!!!!!! les images sont placées sur le coin superieur gauche !!!!!!!!!!!!!!
 # -> a fixer
+bouton_list = []
+for coo_bouton_a_generer in map_bouton:
+    bouton_list.append(Boutton(coo_bouton_a_generer[0], coo_bouton_a_generer[1]))
+
+for bouton in bouton_list:
+    bouton.placer()
 
 
-boutona = Boutton(100,400)
-boutona.placer()
+circuit_list = []
+for coo_circuit_a_generer in map_circuit:
+    circuit_list.append(Circuit(coo_circuit_a_generer[0], coo_circuit_a_generer[1]))
 
-boutonb = Boutton(200,400)
-boutonb.placer()
+for circuit in circuit_list:
+    circuit.placer()
 
-boutonc = Boutton(300,400)
-boutonc.placer()
+#todo operation generateur pour circuits
 
-boutond = Boutton(400,400)
-boutond.placer()
-
-circuita = Circuit(100, 300, "OR")
-circuita.placer()
-
-circuitb = Circuit(300, 300, "OR")
-circuitb.placer()
-
-circuitc = Circuit(200, 200, "OR")
-circuitc.placer()
+#def LineMaker(pointa, pointb, fromage = "up", to = "up"):
 
 
 # mainloop
@@ -264,7 +264,17 @@ while Launched:
             Launched = False
 
         if event.type == MOUSEBUTTONDOWN and event.button == 1:
-            boutona.update(event.pos[0], event.pos[1])
-            boutonb.update(event.pos[0], event.pos[1])
-            boutonc.update(event.pos[0], event.pos[1])
-            boutond.update(event.pos[0], event.pos[1])
+            output = []
+            for bouton in bouton_list:
+                bouton.tester_clic(event.pos[0], event.pos[1])
+                output.append(bouton.state)
+            for circui in circuit_list:
+                circui.logic(output[0], output[1])
+                output.append(circui.output)
+                # retirer les deux utiliser
+                trash = output.pop(0)
+                trash = output.pop(0)
+
+    for bouton in bouton_list:
+        bouton.update()
+    print(output)
