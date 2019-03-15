@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c692da-1582-45d8-8a4f-e4dd8da4730f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AND.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NAND.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NOR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/OR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/AND.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/G1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/G2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/G3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/NAND.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/NOR.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Nouvelle image bitmap.pdn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/OR.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Patacorn.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/XNOR.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/XOR.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/button_off.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/button_on.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/XNOR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/XOR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/button_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/button_on.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/Thumbs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tasks.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tfd" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,38 +16,54 @@
     <favorites_list name="Project-Circuit" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="677">
-              <caret line="269" column="19" selection-start-line="269" selection-start-column="19" selection-end-line="269" selection-end-column="19" />
+            <state relative-caret-position="321">
+              <caret line="253" column="4" selection-start-line="253" selection-start-column="4" selection-end-line="253" selection-end-column="4" />
               <folding>
-                <element signature="e#209#222#0" expanded="true" />
-                <element signature="e#3410#3569#0" />
-                <element signature="e#3614#4323#0" />
-                <element signature="e#3699#3788#0" />
-                <element signature="e#3842#3931#0" />
-                <element signature="e#3986#4075#0" />
-                <element signature="e#4130#4156#0" />
-                <element signature="e#4212#4239#0" />
-                <element signature="e#4296#4323#0" />
-                <element signature="e#4374#5402#0" />
-                <element signature="e#5442#5539#0" />
-                <element signature="e#6093#6142#0" />
-                <element signature="e#6148#6210#0" />
-                <element signature="e#6210#6284#0" />
-                <element signature="e#6356#6425#0" />
+                <element signature="e#690#2504#0" />
+                <element signature="e#2505#6663#0" />
+                <element signature="e#2526#2565#1" />
+                <element signature="e#2609#2753#0" />
+                <element signature="e#2796#4192#0" />
+                <element signature="e#2921#3347#0" />
+                <element signature="e#3029#3347#0" />
+                <element signature="e#3394#3665#0" />
+                <element signature="e#3716#3991#0" />
+                <element signature="e#3824#3991#0" />
+                <element signature="e#4033#4192#0" />
+                <element signature="e#4237#4946#0" />
+                <element signature="e#4465#4554#0" />
+                <element signature="e#4609#4698#0" />
+                <element signature="e#4753#4779#0" />
+                <element signature="e#4835#4862#0" />
+                <element signature="e#4919#4946#0" />
+                <element signature="e#6075#6172#0" />
+                <element signature="e#6220#6312#0" />
+                <element signature="e#6351#6507#0" />
+                <element signature="e#6539#6649#0" />
+                <element signature="e#6681#6779#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Constantes.py">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+            <state relative-caret-position="137">
+              <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-991083293/builtins.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="488" column="4" selection-start-line="488" selection-start-column="4" selection-end-line="488" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -101,6 +94,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="400">
               <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Constantes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -253,15 +255,36 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49636364" visible="true" weight="0.06051437" />
+      <window_info id="Structure" order="1" sideWeight="0.50363636" side_tool="true" weight="0.2602118" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.32980332" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.18679549" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2962963" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.11433172" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.19806764" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32850242" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3281493" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.18196458" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="R Packages" order="4" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49636364" visible="true" weight="0.15128593" />
       <window_info id="Structure" order="1" sideWeight="0.50363636" side_tool="true" weight="0.2602118" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32850242" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32850242" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2962963" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -275,7 +298,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="right" id="R Packages" order="4" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -297,13 +320,6 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Microsoft/Windows/INetCache/IE/ZUUCI0PH/dklabyrinthe[1].py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Dk_Labyrinthe.zip/classes.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Dk_Labyrinthe.zip/dklabyrinthe.py" />
@@ -328,6 +344,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -362,33 +385,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-991083293/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="130">
+          <caret line="488" column="4" selection-start-line="488" selection-start-column="4" selection-end-line="488" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="677">
-          <caret line="269" column="19" selection-start-line="269" selection-start-column="19" selection-end-line="269" selection-end-column="19" />
+        <state relative-caret-position="321">
+          <caret line="253" column="4" selection-start-line="253" selection-start-column="4" selection-end-line="253" selection-end-column="4" />
           <folding>
-            <element signature="e#209#222#0" expanded="true" />
-            <element signature="e#3410#3569#0" />
-            <element signature="e#3614#4323#0" />
-            <element signature="e#3699#3788#0" />
-            <element signature="e#3842#3931#0" />
-            <element signature="e#3986#4075#0" />
-            <element signature="e#4130#4156#0" />
-            <element signature="e#4212#4239#0" />
-            <element signature="e#4296#4323#0" />
-            <element signature="e#4374#5402#0" />
-            <element signature="e#5442#5539#0" />
-            <element signature="e#6093#6142#0" />
-            <element signature="e#6148#6210#0" />
-            <element signature="e#6210#6284#0" />
-            <element signature="e#6356#6425#0" />
+            <element signature="e#690#2504#0" />
+            <element signature="e#2505#6663#0" />
+            <element signature="e#2526#2565#1" />
+            <element signature="e#2609#2753#0" />
+            <element signature="e#2796#4192#0" />
+            <element signature="e#2921#3347#0" />
+            <element signature="e#3029#3347#0" />
+            <element signature="e#3394#3665#0" />
+            <element signature="e#3716#3991#0" />
+            <element signature="e#3824#3991#0" />
+            <element signature="e#4033#4192#0" />
+            <element signature="e#4237#4946#0" />
+            <element signature="e#4465#4554#0" />
+            <element signature="e#4609#4698#0" />
+            <element signature="e#4753#4779#0" />
+            <element signature="e#4835#4862#0" />
+            <element signature="e#4919#4946#0" />
+            <element signature="e#6075#6172#0" />
+            <element signature="e#6220#6312#0" />
+            <element signature="e#6351#6507#0" />
+            <element signature="e#6539#6649#0" />
+            <element signature="e#6681#6779#0" />
           </folding>
         </state>
       </provider>
