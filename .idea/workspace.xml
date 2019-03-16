@@ -2,19 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c692da-1582-45d8-8a4f-e4dd8da4730f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Constantes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constantes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lib/Circuit_lib/Entry_check.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lib/Circuit_lib/Logic.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lib/Circuit_lib/circuit_lib.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lib/input_button/input_button.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/AND.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/AND.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/NAND.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/NAND.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/NOR.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/NOR.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/OR.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/OR.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/Originales/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/XNOR.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/XNOR.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/XOR.png" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/XOR.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="313" column="29" selection-start-line="313" selection-start-column="29" selection-end-line="313" selection-end-column="29" />
+            <state relative-caret-position="273">
+              <caret line="362" column="4" selection-start-line="362" selection-start-column="4" selection-end-line="362" selection-end-column="4" />
               <folding>
                 <element signature="e#623#2886#0" />
                 <element signature="e#1566#1854#0" />
@@ -335,8 +322,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="313" column="29" selection-start-line="313" selection-start-column="29" selection-end-line="313" selection-end-column="29" />
+        <state relative-caret-position="273">
+          <caret line="362" column="4" selection-start-line="362" selection-start-column="4" selection-end-line="362" selection-end-column="4" />
           <folding>
             <element signature="e#623#2886#0" />
             <element signature="e#1566#1854#0" />

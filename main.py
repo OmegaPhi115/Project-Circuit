@@ -300,18 +300,7 @@ def LineMaker(pointxa, pointya, pointxb, pointyb, color, width = 1, fromage = "u
             pygame.draw.line(window_game, color, (pointxa, middley), (pointxb, middley), width)
             pygame.draw.line(window_game, color, (pointxb, middley), (pointxb, pointyb), width)
 
-def update_logic():
-    global output, bouton, circui, seen
-    output = []
-    for bouton in bouton_list:
-        output.append(bouton.state)
-    for circui in circuit_list:
-        circui.logic(output[0], output[1])
-        output.append(circui.output)
-        # retirer les deux utiliser
-        trash = output.pop(0)
-        trash = output.pop(0)
-    seen.state = output.pop(0)
+#jeu
 
 # creation surface
 
@@ -347,8 +336,6 @@ seen = screen(250,100)
 Launched = True
 ctrl = 0
 
-update_logic()
-
 while Launched:
     pygame.display.flip()
     pygame.time.Clock().tick(30)
@@ -359,9 +346,20 @@ while Launched:
         if event.type == MOUSEBUTTONDOWN and event.button == 1:
             for bouton in bouton_list:
                 bouton.tester_clic(event.pos[0], event.pos[1])
-            update_logic()
 
     # fin des events
+
+    # actualisation logique
+    output = []
+    for bouton in bouton_list:
+        output.append(bouton.state)
+    for circui in circuit_list:
+        circui.logic(output[0], output[1])
+        output.append(circui.output)
+        # retirer les deux utiliser
+        trash = output.pop(0)
+        trash = output.pop(0)
+    seen.state = output.pop(0)
 
     # actualisation graphique
     # 1) fond
