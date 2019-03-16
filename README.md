@@ -1,2 +1,5 @@
 # Project-Circuit
-Current version: 1.0
+
+WIP
+Logic game with circuit
+
