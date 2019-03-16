@@ -1,9 +1,10 @@
-from tkinter import *
+import tkinter as tk
 from math import *
 import random
+import Lib.input_button as input_button
 
 #initialisation fenetre
-fen = Tk()
+fen = tk.Tk()
 fen.geometry("400x500")
 fen.title("Projet Circuits")
 fen.rowconfigure(0, weight=1)
@@ -13,12 +14,16 @@ photobuttona = 0
 photobuttonb = 0
 photobuttonc = 0
 
-C = Canvas(fen, height = 500, width = 500, bg="green", borderwidth = 0)
+C = tk.Canvas(fen, height = 500, width = 500, bg="green", borderwidth = 0)
 C.place(x = 0,y = 0, anchor = "nw")
 C.create_line(100,380,100,320, fill="orange")
-##tesssssst = PhotoImage(file='
-##                       images\\Patacorn.gif')
-##C.create_image(0, 0, anchor = "nw", image = tesssssst)
+
+def fen_graphic_update():
+    try:
+        fen.update_idletasks()
+        fen.update()
+    except TclError:
+        pass
 
 
 def maploader(nommap):
@@ -41,7 +46,6 @@ def test(a = ""):
     print (a)
 
 def clic(nombutton):
-
     i = 1
     while i <= buttonindex[0]:
         if buttonindex[i][0] == nombutton:
@@ -54,50 +58,52 @@ def clic(nombutton):
             break
         i += 1
 
-imgoff = PhotoImage(file='images\\button_off.gif')
-imgon = PhotoImage(file='images\\button_on.gif')
+#imgoff = PhotoImage(file='images\\button_off.gif')
+#imgon = PhotoImage(file='images\\button_on.gif')
 #fonction responssable de changer les images
-def graphic ():
-    i = 1
-    #imgtampon = PhotoImage(file='images\\Patacorn.gif')  test
-    #changement des images des bouttons
-    while i <= buttonindex[0]:
-        if buttonindex[i][0] == "buta":
-            if buttonindex[i][2] == 0:
-                buttona.configure(image=imgoff)
-                C.create_line(100,380,100,320, fill="orange")
-            if buttonindex[i][2] == 1:
-                buttona.configure(image=imgon)
-                C.create_line(100,380,100,320, fill="blue")
+##def graphic ():
+##    i = 1
+##    #imgtampon = PhotoImage(file='images\\Patacorn.gif')  test
+##    #changement des images des bouttons
+##    while i <= buttonindex[0]:
+##        if buttonindex[i][0] == "buta":
+##            if buttonindex[i][2] == 0:
+##                buttona.configure(image=imgoff)
+##                C.create_line(100,380,100,320, fill="orange")
+##            if buttonindex[i][2] == 1:
+##                buttona.configure(image=imgon)
+##                C.create_line(100,380,100,320, fill="blue")
+##
+##        if buttonindex[i][0] == "butb":
+##            if buttonindex[i][2] == 0:
+##                buttonb.configure(image=imgoff)
+##                C.create_line(200,380,200,300,140,300, fill="orange")
+##            if buttonindex[i][2] == 1:
+##                buttonb.configure(image=imgon)
+##
+##        if buttonindex[i][0] == "butc":
+##            if buttonindex[i][2] == 0:
+##                buttonc.configure(image=imgoff)
+##                C.create_line(300,380,300,320, fill="orange")
+##            if buttonindex[i][2] == 1:
+##                buttonc.configure(image=imgon)
+##                C.create_line(300,380,300,320, fill="blue")
+##        i = i + 1
 
-        if buttonindex[i][0] == "butb":
-            if buttonindex[i][2] == 0:
-                buttonb.configure(image=imgoff)
-                C.create_line(200,380,200,300,140,300, fill="orange")
-            if buttonindex[i][2] == 1:
-                buttonb.configure(image=imgon)
-
-        if buttonindex[i][0] == "butc":
-            if buttonindex[i][2] == 0:
-                buttonc.configure(image=imgoff)
-                C.create_line(300,380,300,320, fill="orange")
-            if buttonindex[i][2] == 1:
-                buttonc.configure(image=imgon)
-                C.create_line(300,380,300,320, fill="blue")
-        i = i + 1
-
-buttona = Button(fen, command= lambda: clic("buta"))
-buttona.place(x=100, y=400, anchor = "center")
+buttona = input_button(fen,100,400)
+buttona.place()
 buttonb = Button(fen, command= lambda: clic("butb"))
 buttonb.place(x=200, y=400, anchor = "center")
 buttonc = Button(fen, command= lambda: clic("butc"))
 buttonc.place(x=300, y=400, anchor = "center")
-graphic()
+#graphic()
+fff = Button()
 
 x = 100
 y = 300
 
 def circuitalea():
+    """choisi operation au hazard"""
     a = ["or", "nor", "and", "nand", "xor", "xnor"]
     i = random.choice(a)
     if i == "or":
@@ -131,6 +137,6 @@ G3 = Button(fen, image=photoc)
 G3.place(x = x,y = y, anchor = "center")
 
 #end
-graphic()
+#graphic()
 fen.mainloop()
 
