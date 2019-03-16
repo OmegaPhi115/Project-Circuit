@@ -1,4 +1,4 @@
-class logic():
+class Main():
 	"""class de logic de circuit"""
 	def AND(self, a, b):#              android
 		if a + b == 2:
