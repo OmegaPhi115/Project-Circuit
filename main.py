@@ -15,7 +15,6 @@ import random
 
 map_bouton = [[100, 400], [200, 400], [300, 400], [400, 400]]
 map_circuit = [[150, 300], [350, 300], [250, 200]]
-output = []
 
 # class
 class Boutton:
@@ -301,96 +300,95 @@ def LineMaker(pointxa, pointya, pointxb, pointyb, color, width = 1, fromage = "u
             pygame.draw.line(window_game, color, (pointxb, middley), (pointxb, pointyb), width)
 
 #jeu
+def Game(map_bouton, map_circuit):
+    global window_game
+    # creation surface
+    pygame.init()
+    window_resolution = (500, 500)  # resolution de la surface en pixls (tupple)
+    window_game = pygame.display.set_mode(window_resolution)
 
-# creation surface
-
-pygame.init()
-window_resolution = (500, 500)  # resolution de la surface en pixls (tupple)
-window_game = pygame.display.set_mode(window_resolution)
-
-fond = pygame.image.load("Ressources\\Graphique\\Sans titre.png").convert()
-window_game.blit(fond, (0,0))
-
-# creer bouton
-bouton_list = []
-for coo_bouton_a_generer in map_bouton:
-    bouton_list.append(Boutton(coo_bouton_a_generer[0], coo_bouton_a_generer[1]))
-
-for bouton in bouton_list:
-    bouton.placer()
-
-
-circuit_list = []
-for coo_circuit_a_generer in map_circuit:
-    circuit_list.append(Circuit(coo_circuit_a_generer[0], coo_circuit_a_generer[1]))
-
-for circuit in circuit_list:
-    circuit.changer_operation(random.choice(["or", "nor", "and", "nand", "xor", "xnor"]))
-    circuit.placer()
-
-seen = screen(250,100)
-
-#todo operation generateur pour circuits
-
-# mainloop
-Launched = True
-ctrl = 0
-
-while Launched:
-    pygame.display.flip()
-    pygame.time.Clock().tick(30)
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            Launched = False
-
-        if event.type == MOUSEBUTTONDOWN and event.button == 1:
-            for bouton in bouton_list:
-                bouton.tester_clic(event.pos[0], event.pos[1])
-
-    # fin des events
-
-    # actualisation logique
-    output = []
-    for bouton in bouton_list:
-        output.append(bouton.state)
-    for circui in circuit_list:
-        circui.logic(output[0], output[1])
-        output.append(circui.output)
-        # retirer les deux utiliser
-        trash = output.pop(0)
-        trash = output.pop(0)
-    seen.state = output.pop(0)
-
-    # actualisation graphique
-    # 1) fond
     fond = pygame.image.load("Ressources\\Graphique\\Sans titre.png").convert()
     window_game.blit(fond, (0, 0))
 
-    # 2) lignes
-    graphical_input = []
-
-    for circui in circuit_list:
-        graphical_input.append(circui.graphical_input_a)
-        graphical_input.append(circui.graphical_input_b)
-    graphical_input.append(seen.graphical_input)
-
-    # coo fin
-    graphical_input.append([250, 0])
-
+    # creer bouton
+    bouton_list = []
+    for coo_bouton_a_generer in map_bouton:
+        bouton_list.append(Boutton(coo_bouton_a_generer[0], coo_bouton_a_generer[1]))
     for bouton in bouton_list:
-        current_input = graphical_input.pop(0)
-        bouton.line_tracer(current_input)
+        bouton.placer()
 
-    for circui in circuit_list:
-        current_input = graphical_input.pop(0)
-        circui.line_tracer(current_input)
+    # creer circuit
+    circuit_list = []
+    for coo_circuit_a_generer in map_circuit:
+        circuit_list.append(Circuit(coo_circuit_a_generer[0], coo_circuit_a_generer[1]))
+    for circuit in circuit_list:
+        circuit.changer_operation(random.choice(["or", "nor", "and", "nand", "xor", "xnor"]))
+        circuit.placer()
+    # creer screen
+    seen = screen(250, 100)
+
+    # todo operation generateur pour circuits
+
+    # mainloop
+    Launched = True
+    ctrl = 0
+    while Launched:
+        pygame.display.flip()
+        pygame.time.Clock().tick(30)
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                Launched = False
+
+            if event.type == MOUSEBUTTONDOWN and event.button == 1:
+                for bouton in bouton_list:
+                    bouton.tester_clic(event.pos[0], event.pos[1])
+
+        # fin des events
+
+        # actualisation logique
+        output = []
+        for bouton in bouton_list:
+            output.append(bouton.state)
+        for circui in circuit_list:
+            circui.logic(output[0], output[1])
+            output.append(circui.output)
+            # retirer les deux utiliser
+            trash = output.pop(0)
+            trash = output.pop(0)
+        seen.state = output.pop(0)
+
+        # actualisation graphique
+        # 1) fond
+        fond = pygame.image.load("Ressources\\Graphique\\Sans titre.png").convert()
+        window_game.blit(fond, (0, 0))
+
+        # 2) lignes
+        graphical_input = []
+
+        for circui in circuit_list:
+            graphical_input.append(circui.graphical_input_a)
+            graphical_input.append(circui.graphical_input_b)
+        graphical_input.append(seen.graphical_input)
+
+        # coo fin
+        graphical_input.append([250, 0])
+
+        for bouton in bouton_list:
+            current_input = graphical_input.pop(0)
+            bouton.line_tracer(current_input)
+
+        for circui in circuit_list:
+            current_input = graphical_input.pop(0)
+            circui.line_tracer(current_input)
+
+        # 3) objets
+        for bouton in bouton_list:
+            bouton.update()
+
+        for circui in circuit_list:
+            circui.update()
+
+        seen.update()
 
 
-    # 3) objets
-    for bouton in bouton_list:
-        bouton.update()
-
-    for circui in circuit_list:
-        circui.update()
-
-    seen.update()
+Game(map_bouton, map_circuit)
