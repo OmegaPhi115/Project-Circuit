@@ -12,6 +12,7 @@ from pygame.locals import *
 from Constantes import *
 from math import *
 import random
+import time
 
 map_bouton = [[100, 400], [200, 400], [300, 400], [400, 400]]
 map_circuit = [[150, 300], [350, 300], [250, 200]]
@@ -42,6 +43,7 @@ class Boutton:
 
         # logique
         self.state = 0
+        self.last_clic = False
 
         self.graphisme_update()
 
@@ -59,7 +61,16 @@ class Boutton:
                 # coin [a] verifié
                 if x_clic < self.hitbox_xb:
                     if y_clic < self.hitbox_yb:
+                        self.last_clic = True
                         self.clicker()
+                    else:
+                        self.last_clic = False
+                else:
+                    self.last_clic = False
+            else:
+                self.last_clic = False
+        else:
+            self.last_clic = False
 
     def clicker(self):
         """action quand button cliquer"""
@@ -300,8 +311,9 @@ def LineMaker(pointxa, pointya, pointxb, pointyb, color, width = 1, fromage = "u
             pygame.draw.line(window_game, color, (pointxb, middley), (pointxb, pointyb), width)
 
 #jeu
+Launched = True
 def Game(map_bouton, map_circuit):
-    global window_game
+    global window_game, Launched
     # creation surface
     pygame.init()
     window_resolution = (500, 500)  # resolution de la surface en pixls (tupple)
@@ -331,7 +343,9 @@ def Game(map_bouton, map_circuit):
 
     # mainloop
     Launched = True
-    ctrl = 0
+    win_count_down = 0
+    clic_count = 0
+
     while Launched:
         pygame.display.flip()
         pygame.time.Clock().tick(30)
@@ -342,6 +356,8 @@ def Game(map_bouton, map_circuit):
             if event.type == MOUSEBUTTONDOWN and event.button == 1:
                 for bouton in bouton_list:
                     bouton.tester_clic(event.pos[0], event.pos[1])
+                    if bouton.last_clic == True:
+                        clic_count = clic_count + 1
 
         # fin des events
 
@@ -390,5 +406,16 @@ def Game(map_bouton, map_circuit):
 
         seen.update()
 
+        # win ?
+        if seen.state == 1:
+            if clic_count == 0:
+                return
+            win_count_down = win_count_down + 1
+            if win_count_down == 3:
+                print("win !")
+                print("clic count: " + str(clic_count))
+                time.sleep(1)
+                return
 
-Game(map_bouton, map_circuit)
+while Launched:
+    Game(map_bouton, map_circuit)
