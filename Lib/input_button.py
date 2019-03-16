@@ -20,11 +20,8 @@ class input_button():
             self.button_widget = Button(fen)
         except:
             print("Error: button is not init !")
-        print("It's NOT over")
         self.place()
-        print("T'ill it's over")
         self.graphisme_update()
-        print("WUB WUB WUB")
 
     def graphisme_update(self):
         """mise a jour des graphismes"""
@@ -45,10 +42,10 @@ class input_button():
             self.state = "on"
         elif self.state == "on":
             self.state = "off"
-        else:
-            print("Invalid state Line 75 (>_<)")
         self.graphisme_update()
 
     def place(self):
         """place sur la fenetre"""
         self.button_widget.place(x=self.xPos, y=self.yPos, anchor = "center")
+
+

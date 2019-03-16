@@ -1,7 +1,8 @@
+#transferre sur main.py
 import tkinter as tk
 from math import *
 import random
-import Lib.input_button as input_button
+import Lib.input_button
 
 #initialisation fenetre
 fen = tk.Tk()
