@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c692da-1582-45d8-8a4f-e4dd8da4730f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lib/Circuit_lib/circuit_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/Lib/Circuit_lib/circuit_lib.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/Originales/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/patacorn_by_justpatacorn-dbvwznm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/png/AND.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/png/NAND.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/png/NOR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/png/OR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/png/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/Originales/png/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/png/XNOR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/png/XOR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/png/button_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/png/button_on.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/Thumbs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -29,40 +16,54 @@
     <favorites_list name="Project-Circuit" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="321">
+              <caret line="253" column="4" selection-start-line="253" selection-start-column="4" selection-end-line="253" selection-end-column="4" />
               <folding>
-                <element signature="e#102#115#0" expanded="true" />
-                <element signature="e#338#4156#0" />
-                <element signature="e#410#1595#0" />
-                <element signature="e#1846#2554#0" />
-                <element signature="e#2624#3644#0" />
+                <element signature="e#690#2504#0" />
+                <element signature="e#2505#6663#0" />
+                <element signature="e#2526#2565#1" />
+                <element signature="e#2609#2753#0" />
+                <element signature="e#2796#4192#0" />
+                <element signature="e#2921#3347#0" />
+                <element signature="e#3029#3347#0" />
+                <element signature="e#3394#3665#0" />
+                <element signature="e#3716#3991#0" />
+                <element signature="e#3824#3991#0" />
+                <element signature="e#4033#4192#0" />
+                <element signature="e#4237#4946#0" />
+                <element signature="e#4465#4554#0" />
+                <element signature="e#4609#4698#0" />
+                <element signature="e#4753#4779#0" />
+                <element signature="e#4835#4862#0" />
+                <element signature="e#4919#4946#0" />
+                <element signature="e#6075#6172#0" />
+                <element signature="e#6220#6312#0" />
+                <element signature="e#6351#6507#0" />
+                <element signature="e#6539#6649#0" />
+                <element signature="e#6681#6779#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/Logic.py">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-175">
-              <caret selection-end-line="28" />
+            <state relative-caret-position="137">
+              <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autre/doc/dklabyrinthe.py">
+        <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-991083293/builtins.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-61">
-              <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
-              <folding>
-                <element signature="e#244#257#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="130">
+              <caret line="488" column="4" selection-start-line="488" selection-start-column="4" selection-end-line="488" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -70,10 +71,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autre/doc/classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
+            <state relative-caret-position="16">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
-                <element signature="e#132#1895#0" />
+                <element signature="e#48#61#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,17 +82,27 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autre/doc/constantes.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/circuit_lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="400">
               <caret line="26" selection-start-line="26" selection-end-line="26" />
-              <folding>
-                <element signature="e#537#558#0" expanded="true" />
-              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Constantes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -101,15 +112,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/tfd" root0="SKIP_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/tfd" />
         <option value="$PROJECT_DIR$/autre/doc/classes.py" />
         <option value="$PROJECT_DIR$/Lib/Circuit_lib/circuit_lib.py" />
+        <option value="$PROJECT_DIR$/Constantes.py" />
         <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
@@ -153,6 +162,13 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings>
+        <option name="useSoftWraps" value="true" />
+      </console-settings>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -242,40 +258,51 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49868074" visible="true" weight="0.24886535" />
-      <window_info id="Structure" order="1" sideWeight="0.5013193" side_tool="true" weight="0.24659607" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49636364" visible="true" weight="0.06051437" />
+      <window_info id="Structure" order="1" sideWeight="0.50363636" side_tool="true" weight="0.2602118" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.18679549" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32850242" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2962963" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.11433172" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.19806764" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32850242" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3281493" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32850242" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.18196458" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="R Packages" order="4" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49636364" visible="true" weight="0.15128593" />
+      <window_info id="Structure" order="1" sideWeight="0.50363636" side_tool="true" weight="0.2602118" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.32980332" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32850242" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.2962963" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.11433172" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.19806764" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32850242" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3281493" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.18196458" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="right" id="R Packages" order="4" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/autre/doc/classes.py</url>
-          <line>6</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/autre/doc/classes.py</url>
-          <line>2</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Lib/Circuit_lib/Entry_check.py</url>
           <option name="timeStamp" value="3" />
@@ -294,10 +321,29 @@
     <entry file="file://$USER_HOME$/AppData/Local/Microsoft/Windows/INetCache/IE/ZUUCI0PH/dklabyrinthe[1].py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Dk_Labyrinthe.zip/classes.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Dk_Labyrinthe.zip/dklabyrinthe.py" />
+    <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/Entry_check.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
+        <state>
+          <caret column="13" lean-forward="true" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autre/doc/dklabyrinthe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1264">
+          <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
+          <folding>
+            <element signature="e#244#257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/Logic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -308,80 +354,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Dk_Labyrinthe.zip/classes.py">
+    <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/circuit_lib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-319">
-          <caret line="84" column="8" lean-forward="true" selection-start-line="83" selection-start-column="58" selection-end-line="84" selection-end-column="8" />
-          <folding>
-            <element signature="e#132#1895#0" />
-          </folding>
+        <state relative-caret-position="400">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Dk_Labyrinthe.zip/dklabyrinthe.py">
+    <entry file="file://$PROJECT_DIR$/autre/doc/constantes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="79" column="24" lean-forward="true" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+        <state relative-caret-position="160">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/autre/doc/classes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="16">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
-            <element signature="e#132#1895#0" />
+            <element signature="e#48#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autre/doc/dklabyrinthe.py">
+    <entry file="file://$PROJECT_DIR$/Constantes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
-          <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
-          <folding>
-            <element signature="e#244#257#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="144">
+          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autre/doc/constantes.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/circuit_lib.py">
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-991083293/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#537#558#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="130">
+          <caret line="488" column="4" selection-start-line="488" selection-start-column="4" selection-end-line="488" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/Entry_check.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/Logic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret selection-end-line="28" />
+        <state relative-caret-position="137">
+          <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="321">
+          <caret line="253" column="4" selection-start-line="253" selection-start-column="4" selection-end-line="253" selection-end-column="4" />
           <folding>
-            <element signature="e#102#115#0" expanded="true" />
-            <element signature="e#338#4156#0" />
-            <element signature="e#410#1595#0" />
-            <element signature="e#1846#2554#0" />
-            <element signature="e#2624#3644#0" />
+            <element signature="e#690#2504#0" />
+            <element signature="e#2505#6663#0" />
+            <element signature="e#2526#2565#1" />
+            <element signature="e#2609#2753#0" />
+            <element signature="e#2796#4192#0" />
+            <element signature="e#2921#3347#0" />
+            <element signature="e#3029#3347#0" />
+            <element signature="e#3394#3665#0" />
+            <element signature="e#3716#3991#0" />
+            <element signature="e#3824#3991#0" />
+            <element signature="e#4033#4192#0" />
+            <element signature="e#4237#4946#0" />
+            <element signature="e#4465#4554#0" />
+            <element signature="e#4609#4698#0" />
+            <element signature="e#4753#4779#0" />
+            <element signature="e#4835#4862#0" />
+            <element signature="e#4919#4946#0" />
+            <element signature="e#6075#6172#0" />
+            <element signature="e#6220#6312#0" />
+            <element signature="e#6351#6507#0" />
+            <element signature="e#6539#6649#0" />
+            <element signature="e#6681#6779#0" />
           </folding>
         </state>
       </provider>
