@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c692da-1582-45d8-8a4f-e4dd8da4730f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Originales/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/Originales/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ressources/Graphique/gif/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ressources/Graphique/gif/Thumbs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,20 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="357" column="66" lean-forward="true" selection-start-line="357" selection-start-column="66" selection-end-line="357" selection-end-column="66" />
-              <folding>
-                <element signature="e#623#2886#0" />
-                <element signature="e#1566#1854#0" />
-                <element signature="e#2173#2350#0" />
-                <element signature="e#2382#2477#0" />
-                <element signature="e#2509#2591#0" />
-                <element signature="e#2907#8275#0" />
-                <element signature="e#4944#5653#0" />
-                <element signature="e#5690#6689#0" />
-                <element signature="e#8097#8818#0" />
-                <element signature="e#716#1097#0" />
-              </folding>
+            <state relative-caret-position="16">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -39,7 +31,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Constantes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
+            <state relative-caret-position="496">
               <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
             </state>
           </provider>
@@ -183,22 +175,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49636364" weight="0.061270803" />
       <window_info id="Structure" order="1" sideWeight="0.50363636" side_tool="true" weight="0.2602118" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32980332" />
+      <window_info id="Run" order="3" sideWeight="0.49924356" weight="0.31543118" />
+      <window_info id="Debug" order="4" weight="0.295764" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.18679549" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.32850242" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2962963" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.11433172" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.19806764" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32850242" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.32850242" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.18196458" />
+      <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.11433172" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.19806764" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32850242" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50075644" side_tool="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Python Console" order="8" weight="0.18196458" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -244,13 +235,7 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Dk_Labyrinthe.zip/classes.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_Dk_Labyrinthe.zip/dklabyrinthe.py" />
-    <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/Entry_check.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/Entry_check.py" />
     <entry file="file://$PROJECT_DIR$/autre/doc/dklabyrinthe.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1264">
@@ -261,13 +246,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/Logic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/Logic.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -275,13 +254,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/circuit_lib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Lib/Circuit_lib/circuit_lib.py" />
     <entry file="file://$PROJECT_DIR$/autre/doc/constantes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -313,29 +286,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Constantes.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        <state relative-caret-position="16">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding>
+            <element signature="e#3031#8399#0" />
+            <element signature="e#8420#9149#0" />
+            <element signature="e#9262#9643#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/Constantes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="357" column="66" lean-forward="true" selection-start-line="357" selection-start-column="66" selection-end-line="357" selection-end-column="66" />
-          <folding>
-            <element signature="e#623#2886#0" />
-            <element signature="e#1566#1854#0" />
-            <element signature="e#2173#2350#0" />
-            <element signature="e#2382#2477#0" />
-            <element signature="e#2509#2591#0" />
-            <element signature="e#2907#8275#0" />
-            <element signature="e#4944#5653#0" />
-            <element signature="e#5690#6689#0" />
-            <element signature="e#8097#8818#0" />
-            <element signature="e#716#1097#0" />
-          </folding>
+        <state relative-caret-position="496">
+          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
         </state>
       </provider>
     </entry>
