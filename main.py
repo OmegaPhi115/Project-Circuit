@@ -14,17 +14,16 @@ import random
 import time
 
 # map loading
-row_count = 5 + (1 + 1) # nombre rangé circuit + (screen + bouton)
-taille = (1300, 700)
+row_count = 10 + (1 + 1) # nombre rangé circuit + (screen + bouton)
+taille = (500, 500)
 
 # todo protection entrées
-
-if True:
+def location_calculs(input_row, screen_size):
+    global screen_pos, map_circuit, map_bouton
     # nombre circuits et boutons
-    row_circuit = row_count - 2
-    #retirer le premier
+    row_circuit = input_row - 2
+    # retirer le premier
     row_circuit -= 1
-
     i = 0
     care = 1
     liste_circuit_row = []
@@ -35,27 +34,20 @@ if True:
         i += 1
     bouton_count = care
     # bouton x
-    t = list(taille)
+    t = list(screen_size)
     taille_x = t[0]
     taille_y = t[1]
-
-
     # y
-
     # bou = (taille_y-fenetre - (taille_screen) - (nombrederangéedecircuit * leurtaille) - (tailledesboutons) /
     # ((nombredecircuit + 1 + 1) + 1)
     repartition_y = int((taille_y - img_screen_taille_y - (row_circuit * img_circuit_taille_y) -
-                         img_button_taille_y) / ((row_count+ 1)))
-
+                         img_button_taille_y) / ((row_count + 1)))
     # x
-    #screen
+    # screen
     screen_pos = [int(taille_x / 2), int(repartition_y + int((img_screen_taille_y) / 2))]
-
     repartition_y_taken = 0
     repartition_y_taken += int(repartition_y + img_screen_taille_y)
-
     # circuit x
-
     map_circuit = []
     for nbr_cir in liste_circuit_row:
         circuit_repartition_x = int((taille_x - (nbr_cir * img_circuit_taille_x)) / (nbr_cir + 1))
@@ -72,16 +64,10 @@ if True:
         for i in map_tempo:
             map_circuit.append(i)
         repartition_y_taken += repartition_y + img_circuit_taille_y
-
     map_circuit.reverse()
-
-
-    #bouton
-
+    # bouton
     # bou = (500 - (nombredebouton * lataille)) / lenombred'espace + 1
-
     bouton_repartition_x = int((taille_x - (bouton_count * img_button_taille_x)) / (bouton_count + 1))
-
     # tempo car metre y dinamiquement
     map_bouton = []
     pos = 0
@@ -89,13 +75,10 @@ if True:
         pos = pos + bouton_repartition_x + (img_button_taille_x / 2)
         map_bouton.append([pos, int(repartition_y_taken + repartition_y + int((img_button_taille_y / 2)))])
         pos += img_button_taille_x / 2
-
-    if bouton_repartition_x < img_circuit_taille_x:
+    if bouton_repartition_x < 0:
         print("agrandir fenetre en x")
     if repartition_y < 40:
         print("agrandir fenetre en y")
-
-
 
 # class
 class Boutton:
@@ -397,13 +380,11 @@ def LineMaker(pointxa, pointya, pointxb, pointyb, color, width=1, fromage="up", 
 
 # jeu
 
-
-
 def Game(map_bouton, map_circuit, screen_coo):
-    global window_game
+    global window_game, taille, game_on
     # creation surface
     pygame.init()
-    window_game = pygame.display.set_mode(taille)
+    window_game = pygame.display.set_mode(taille, pygame.RESIZABLE)
 
     fond = pygame.image.load("Ressources\\Graphique\\Sans titre.png").convert()
     window_game.blit(fond, (0, 0))
@@ -431,16 +412,25 @@ def Game(map_bouton, map_circuit, screen_coo):
     clic_count = 0
 
     while Launched:
+
+        #surface = pygame.display.get_surface()
+        #taille = surface.get_width(), surface.get_height()
+        #print(taille)
         pygame.time.Clock().tick(30)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 Launched = False
+                game_on = False
 
             if event.type == MOUSEBUTTONDOWN and event.button == 1:
                 for bouton in bouton_list:
                     bouton.tester_clic(event.pos[0], event.pos[1])
                     if bouton.last_clic:
                         clic_count += 1
+
+            if event.type==VIDEORESIZE:
+                taille = event.dict['size']
+                return
 
         # fin des events
 
@@ -510,4 +500,5 @@ def Game(map_bouton, map_circuit, screen_coo):
 game_on = True
 
 while game_on:
+    location_calculs(row_count, taille)
     Game(map_bouton, map_circuit, screen_pos)
