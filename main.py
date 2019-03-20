@@ -1,10 +1,5 @@
-"""
-circuit refaire les sprites car pas dans theme
-
-map generation:
-bouton = [[x, y], ...]
-circuit = #bas gauche premier, hautdroite dernier [(x, y), ...]
-"""
+# map loading
+row_count = 10 + (1 + 1) # number of rows / nombre rangées circuit 
 
 # imports
 import pygame
@@ -13,8 +8,6 @@ from Constantes import *
 import random
 import time
 
-# map loading
-row_count = 10 + (1 + 1) # nombre rangé circuit + (screen + bouton)
 taille = (500, 500)
 
 # todo protection entrées
