@@ -1,5 +1,9 @@
 # Project-Circuit
 
-WIP
-Logic game with circuit
+Reflexion game with logics circuits
 
+/!\ Still in Beta /!\ Bugs ahead /!\
+
+##game
+
+##how to play ?
