@@ -1,5 +1,5 @@
 # map loading
-row_count = 10 + (1 + 1) # number of rows / nombre rangées circuit 
+row_count = 5 + (1 + 1) # number of rows / nombre rangées circuit 
 
 # imports
 import pygame
