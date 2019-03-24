@@ -1,5 +1,6 @@
-from Ressources.Code.Importations_Globales import *
-from Ressources.Code.LineMaker import *
+from Ressources.Code.Fonctions.LineMaker import *
+
+
 class Boutton:
     """boutton D'entrée"""
 
@@ -79,6 +80,6 @@ class Boutton:
             colo = couleur_off
         else:
             colo = couleur_on
-        LineMaker(self.fen ,self.graphical_output[0], self.graphical_output[1], destination_location[0],
+        LineMaker(self.fen, self.graphical_output[0], self.graphical_output[1], destination_location[0],
                   destination_location[
             1], colo, 2)
