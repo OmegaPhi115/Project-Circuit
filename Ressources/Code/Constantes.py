@@ -23,10 +23,11 @@ img_button_taille_y = 40
 
 #       screen
 img_screen_off = "Ressources\\Graphique\\fin.png"
-#img_screen_on_1 =
-#img_screen_on_2 =
-#img_screen_on_3 =
+img_screen_on_1 = "Ressources\\Graphique\\fin1.png"
+img_screen_on_2 = "Ressources\\Graphique\\fin2.png"
+img_screen_on_3 = "Ressources\\Graphique\\fin3.png"
 img_screen_on_4 = "Ressources\\Graphique\\fin4.png"
+img_screen_on_5 = "Ressources\\Graphique\\fin5.png"
 
 img_screen_taille_x = 100
 img_screen_taille_y = 40
