@@ -1,4 +1,4 @@
-from Ressources.Code.imports import *
+from Ressources.Code.Importations import *
 
 """
 map generation:
