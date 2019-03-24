@@ -1,22 +1,22 @@
+from Ressources.Code.imports import *
+
 """
 map generation:
 bouton = [[x, y], ...]
 circuit = #bas gauche premier, hautdroite dernier [(x, y), ...]
 """
 
-# map loading
-row_count = 5 + (1 + 1) # number of rows / nombre rangées circuit 
+# Entrées
+row_count = 3 + (1 + 1) # number of rows / nombre rangées circuit
 
-# imports
-import pygame
-from pygame.locals import *
-from Constantes import *
-import random
-import time
+try:
+    if row_count <= 1:
+        print("error: row_count must be higher than 1")
+        raise TypeError
+except TypeError:
+    start_up = "Wrong Entries: row_count"
 
 taille = (500, 500)
-
-# todo protection entrées
 def location_calculs(input_row, screen_size):
     global screen_pos, map_circuit, map_bouton
     # nombre circuits et boutons
@@ -111,7 +111,6 @@ class Boutton:
         self.graphisme_update()
 
     def graphisme_update(self):
-        # TODO modifier graphisme
         """mise a jour des graphismes"""
         if self.state == 0:
             self.current_image = pygame.image.load(img_button_OFF).convert_alpha()
@@ -383,6 +382,8 @@ def Game(map_bouton, map_circuit, screen_coo):
     global window_game, taille, game_on
     # creation surface
     pygame.init()
+    #todo trouver nom pour jeu
+    pygame.display.set_caption('Project Circuit')
     window_game = pygame.display.set_mode(taille, pygame.RESIZABLE)
 
     fond = pygame.image.load("Ressources\\Graphique\\Sans titre.png").convert()
@@ -486,12 +487,14 @@ def Game(map_bouton, map_circuit, screen_coo):
 
             # win ?
             if seen.state == 1:
+                win_count_down = 1
+            if win_count_down != 0:
                 win_count_down += 1
-                if win_count_down == 3:
-                    print("win !")
-                    print("clic count: " + str(clic_count))
-                    time.sleep(1)
-                    return
+            if win_count_down == 3:
+                print("win !")
+                print("clic count: " + str(clic_count))
+                time.sleep(1)
+                return
 
         # actualisation fen
         pygame.display.flip()
