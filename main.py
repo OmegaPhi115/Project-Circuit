@@ -1,3 +1,9 @@
+"""
+map generation:
+bouton = [[x, y], ...]
+circuit = #bas gauche premier, hautdroite dernier [(x, y), ...]
+"""
+
 # map loading
 row_count = 5 + (1 + 1) # number of rows / nombre rangées circuit 
 
