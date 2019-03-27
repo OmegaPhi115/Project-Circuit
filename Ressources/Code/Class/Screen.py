@@ -1,6 +1,6 @@
 from Ressources.Code.Importations_Globales import *
 
-class screen:
+class Screen:
     def __init__(self, fen, x, y, mode="center"):
         self.fen = fen
         self.x = x

@@ -3,6 +3,7 @@ Constantes du jeu
 """
 
 # graphismes
+Window_taille = (500, 500)
 #       Circuit
 img_circuit_OR = "Ressources\\Graphique\\OR.png"
 img_circuit_NOR = "Ressources\\Graphique\\NOR.png"
