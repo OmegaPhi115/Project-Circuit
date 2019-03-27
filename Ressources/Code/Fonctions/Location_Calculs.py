@@ -1,6 +1,6 @@
 """J'aurait du commenter"""
 from Ressources.Code.Importations_Globales import *
-def location_calculs(input_row):
+def location_calculs(input_row,taille):
     #output screen_pos, map_circuit, map_bouton
     if input_row <= 1:
         print("error: row_count must be higher than 1")
@@ -19,7 +19,7 @@ def location_calculs(input_row):
         i += 1
     bouton_count = care
     # bouton x
-    t = list(Window_taille)
+    t = list(taille)
     taille_x = t[0]
     taille_y = t[1]
     # y

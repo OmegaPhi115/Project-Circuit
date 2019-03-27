@@ -1,4 +1,4 @@
-row_count = 3 + (1 + 1) # number of rows / nombre rangées circuit
+row_count = 4 + (1 + 1) # number of rows / nombre rangées circuit
 
 from Ressources.Code.Importations_Globales import *
 from Ressources.Code.Fonctions.Music_loader import musique
@@ -10,5 +10,6 @@ musique()
 #Boucle infinie
 game_on = True
 
+a = Game()
 while game_on:
-    game_on = Game(row_count)
+    game_on = a.main(row_count)
