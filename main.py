@@ -1,7 +1,7 @@
 from Ressources.Code.Class.Boutton import *
 from Ressources.Code.Class.Circuit import *
 from Ressources.Code.Class.Screen import *
-
+import os
 
 """
 map generation:
@@ -11,6 +11,8 @@ circuit = #bas gauche premier, hautdroite dernier [(x, y), ...]
 
 # Entrées
 row_count = 3 + (1 + 1) # number of rows / nombre rangées circuit
+
+pygame.init()
 
 try:
     if row_count <= 1:
@@ -82,12 +84,33 @@ def location_calculs(input_row, screen_size):
     if repartition_y < 40:
         print("agrandir fenetre en y")
 
+pygame.mixer.init(44100, -16, 2, 4096)
+def musique():
+    no = 0
+    for root, directories, filenames in os.walk(
+            "C:\\Users\\François\\Documents\\GitHub\\Project-Circuit\\Ressources\\Son\\Music"):#todo changer ca pls
+        for filename in filenames:
+            print(filename)
+            filename = str(filename)
+            if filename.endswith(".wav"):
+                print("=============> end good")
+                print(filename)
+                pygame.mixer.music.load("C:\\Users\\François\\Documents\\GitHub\\Project-Circuit\\Ressources\\Son\\Music\\perso\\08 - You Will Be Evaluated Later.wav")
+                no = 1
+                print("=============")
+    if no == 1:
+        pygame.mixer.music.play()
+    print(no)
+
+
+
+musique()
+
 # jeu
 
 def Game(map_bouton, map_circuit, screen_coo):
     global window_game, taille, game_on
     # creation surface
-    pygame.init()
     #todo trouver nom pour jeu
     pygame.display.set_caption('Project Circuit')
     window_game = pygame.display.set_mode(taille, pygame.RESIZABLE)
