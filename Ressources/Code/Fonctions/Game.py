@@ -87,8 +87,24 @@ class Game:
             actu_graph = True
             if actu_graph:
                 # 1) fond
-                fond = pygame.image.load("Ressources\\Graphique\\Sans titre.png").convert()
-                window_game.blit(fond, (0, 0))
+                window_game.fill([40, 40, 40])
+
+                #quelle fond utilier ?
+                if list(self.taille)[0] >= 800:
+                    if list(self.taille)[1] >= 400:
+                        fond = pygame.image.load("Ressources\\Graphique\\Logo N&B.png").convert_alpha()
+                        window_game.blit(fond,((((list(self.taille)[0]) / 2) - img_logo_taille_x / 2), ((list(self.taille)[
+                                             1]) / 2) - img_logo_taille_y / 2))
+                    else:
+                        fond = pygame.image.load("Ressources\\Graphique\\Logo N&B 50%.png").convert_alpha()
+                        window_game.blit(fond,
+                                         ((((list(self.taille)[0]) / 2) - img_logo50_taille_x / 2), ((list(self.taille)[
+                                             1]) / 2) - img_logo50_taille_y / 2))
+                else:
+                    fond = pygame.image.load("Ressources\\Graphique\\Logo N&B 50%.png").convert_alpha()
+                    window_game.blit(fond,
+                                     ((((list(self.taille)[0]) / 2) - img_logo50_taille_x / 2), ((list(self.taille)[
+                                         1]) / 2) - img_logo50_taille_y / 2))
 
                 # 2) lignes
                 graphical_input = []
@@ -132,6 +148,10 @@ class Game:
                         print("win !")
                         print("clic count: " + str(clic_count))
                         time.sleep(1)
+                        s = pygame.Surface((1000, 750), pygame.SRCALPHA)  # per-pixel alpha
+                        s.fill((40, 40, 40, 150))  # notice the alpha value in the color
+                        window_game.blit(s, (0, 0))
+                        pygame.display.flip()
                         return True
 
             # actualisation fen
