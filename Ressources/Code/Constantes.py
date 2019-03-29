@@ -3,6 +3,14 @@ Constantes du jeu
 """
 
 # graphismes
+Window_taille = (500, 500)
+
+img_logo_taille_x = 709
+img_logo_taille_y = 329
+
+img_logo50_taille_x = 355
+img_logo50_taille_y = 164
+
 #       Circuit
 img_circuit_OR = "Ressources\\Graphique\\OR.png"
 img_circuit_NOR = "Ressources\\Graphique\\NOR.png"
