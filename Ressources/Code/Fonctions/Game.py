@@ -3,6 +3,7 @@ from Ressources.Code.Class.Circuit import Circuit
 from Ressources.Code.Class.Screen import Screen
 from Ressources.Code.Fonctions.Location_Calculs import location_calculs
 from Ressources.Code.Importations_Globales import *
+from Ressources.Code.Class.Loading_Animation import *
 
 # class
 class Game:
@@ -21,6 +22,8 @@ class Game:
 
         fond = pygame.image.load("Ressources\\Graphique\\Sans titre.png").convert()
         window_game.blit(fond, (0, 0))
+
+        ffffl = Loading_Animation(window_game, 0, 0)
 
         # creer bouton
         bouton_list = []
@@ -49,6 +52,7 @@ class Game:
             # taille = surface.get_width(), surface.get_height()
             # print(taille)
             pygame.time.Clock().tick(30)
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     Launched = False
@@ -134,6 +138,8 @@ class Game:
 
                 seen.update()
 
+
+
                 # win ?
                 if seen.state == 1:
                     seen.change_state()
@@ -151,6 +157,7 @@ class Game:
                         s = pygame.Surface((1000, 750), pygame.SRCALPHA)  # per-pixel alpha
                         s.fill((40, 40, 40, 150))  # notice the alpha value in the color
                         window_game.blit(s, (0, 0))
+                        #ffffl.anim()
                         pygame.display.flip()
                         return True
 
