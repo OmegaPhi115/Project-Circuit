@@ -7,9 +7,7 @@ import os
 
 musique()
 
-#Boucle infinie
 game_on = True
-
 a = Game()
 while game_on:
-    game_on = a.main(row_count)
+    game_on = a.Run(row_count)
