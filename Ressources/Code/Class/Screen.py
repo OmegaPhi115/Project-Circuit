@@ -25,6 +25,7 @@ class Screen:
             self.image_count += 1
 
     def placer(self):
+        img = "state invalid"
         if self.image_count == 0:
             img = img_screen_off
         if self.image_count == 1:
