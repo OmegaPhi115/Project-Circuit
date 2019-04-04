@@ -19,7 +19,6 @@ class Game:
         pygame.display.set_caption('Project Circuit')
         self.window_game = pygame.display.set_mode(self.taille, pygame.RESIZABLE)
         #self.window_game.blit(pygame.image.load("Ressources\\Graphique\\Logo N&B 50%.png").convert_alpha(), (250, 250))
-        pygame.display.flip()
         self.Widget_creation(row_count)
 
     def Widget_creation(self, row_count):
@@ -39,9 +38,8 @@ class Game:
         self.liste_operations = []
         for circuit in self.circuit_list:
             self.liste_operations.append(random.choice(["or", "nor", "and", "nand", "xor", "xnor"]))
-        print(self.liste_operations)
+
         for i in range(len(self.liste_operations)):
-            print(self.liste_operations[i])
             self.circuit_list[i].changer_operation(self.liste_operations[i])
 
         # creer screen
