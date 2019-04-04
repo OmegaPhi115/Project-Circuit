@@ -36,13 +36,17 @@ class Game:
             self.circuit_list.append(Circuit(self.window_game, coo_circuit_a_generer[0], coo_circuit_a_generer[1]))
 
         #attribuer les operations:
+        #creer list opera
         self.liste_operations = []
         for circuit in self.circuit_list:
             self.liste_operations.append(random.choice(["or", "nor", "and", "nand", "xor", "xnor"]))
         print(self.liste_operations)
+
+        #apliquer
         for i in range(len(self.liste_operations)):
             print(self.liste_operations[i])
             self.circuit_list[i].changer_operation(self.liste_operations[i])
+            #self.circuit_list[i]
 
         # creer screen
         self.seen = Screen(self.window_game, self.screen_pos[0], self.screen_pos[1])

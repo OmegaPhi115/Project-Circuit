@@ -1,29 +1,22 @@
-from Ressources.Code.Fonctions.LineMaker import *
+from Ressources.Code.Fonctions.LineMaker import LineMaker
+from Ressources.Code.Class.Widget import Widget
 
 
-class Circuit:
+class Circuit(Widget):
     """
     Class finale de circuit
     """
 
-    def __init__(self, fen, x, y, mode="center"):
-        self.fen = fen
-        self.x = x
-        self.y = y
-        self.operation = "or"
-        self.image = "not init"
+    def __init__(self, fen, x, y):
+        Widget.__init__(self, x, y,fen)
+        self.operation = "No Operation"
+        self.image = "No Image"
         self.output = 0
 
         self.graphical_input_a = [self.x - 20, self.y]
         self.graphical_input_b = [self.x + 20, self.y]
 
         self.graphical_output = [self.x, self.y]
-
-        if mode == "center":
-            self.x = self.x - (img_circuit_taille_x / 2) + 1
-            self.y = self.y - (img_circuit_taille_y / 2) + 1
-
-        self.changer_image()
 
     class Circuit_Entry_Checker:
         """Regarde si les entrées sont valides sinon erreur: OperationError"""
@@ -154,6 +147,9 @@ class Circuit:
             self.image = pygame.image.load(img_circuit_XOR).convert_alpha()
         if self.operation == "xnor":
             self.image = pygame.image.load(img_circuit_XNOR).convert_alpha()
+
+        self.Get_image_size()
+
 
     def placer(self):
         """Placer sur la surface"""
