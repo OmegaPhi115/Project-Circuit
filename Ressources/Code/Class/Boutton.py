@@ -45,6 +45,7 @@ class Boutton:
                 # coin [a] verifié
                 if x_clic < self.hitbox_xb:
                     if y_clic < self.hitbox_yb:
+                        # coin [b] verifié
                         self.last_clic = True
                         self.clicker()
                     else:

@@ -73,6 +73,7 @@ class Game:
                             bouton.tester_clic(event.pos[0], event.pos[1])
                             if bouton.last_clic:
                                 self.clic_count += 1
+                                break
 
                 if event.type == VIDEORESIZE:
                     self.taille = event.dict['size']

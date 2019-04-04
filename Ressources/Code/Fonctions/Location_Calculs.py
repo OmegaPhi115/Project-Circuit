@@ -26,7 +26,7 @@ def location_calculs(input_row,taille):
     # bou = (taille_y-fenetre - (taille_screen) - (nombrederangéedecircuit * leurtaille) - (tailledesboutons) /
     # ((nombredecircuit + 1 + 1) + 1)
     repartition_y = int((taille_y - img_screen_taille_y - (row_circuit * img_circuit_taille_y) -
-                         img_button_taille_y) / ((input_row + 1)))
+                         img_button_taille_y) / (input_row + 1))
     # x
     # screen
     screen_pos = [int(taille_x / 2), int(repartition_y + int((img_screen_taille_y) / 2))]
