@@ -69,7 +69,7 @@ class Game:
 
                 if event.type == MOUSEBUTTONDOWN and event.button == 1:
                     if self.seen.state == 0:
-                        for bouton in self.bouton_list:
+                        for bouton in reversed(self.bouton_list):
                             bouton.tester_clic(event.pos[0], event.pos[1])
                             if bouton.last_clic:
                                 self.clic_count += 1
