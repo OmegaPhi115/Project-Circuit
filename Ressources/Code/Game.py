@@ -3,7 +3,7 @@ from Ressources.Code.Class.Circuit import Circuit
 from Ressources.Code.Class.Screen import Screen
 from Ressources.Code.Fonctions.Location_Calculs import location_calculs
 from Ressources.Code.Class.Loading_Animation import *
-
+from Ressources.Code.Data.Importations_Globales import *
 
 # todo trouver nom pour jeu
 
@@ -11,7 +11,7 @@ from Ressources.Code.Class.Loading_Animation import *
 # class
 class Game:
     def __init__(self):
-        self.taille = Window_taille
+        self.taille = Constantes.Window_taille
 
     def start(self, row_count):
         # creation surface
@@ -129,18 +129,18 @@ class Game:
             if list(self.taille)[0] >= 800:
                 if list(self.taille)[1] >= 400:
                     fond = pygame.image.load("Ressources\\Graphique\\Logo N&B.png").convert_alpha()
-                    self.window_game.blit(fond,((((list(self.taille)[0]) / 2) - img_logo_taille_x / 2), ((list(self.taille)[
-                                         1]) / 2) - img_logo_taille_y / 2))
+                    self.window_game.blit(fond,((((list(self.taille)[0]) / 2) - Constantes.img_logo_taille_x / 2), ((list(self.taille)[
+                                         1]) / 2) - Constantes.img_logo_taille_y / 2))
                 else:
                     fond = pygame.image.load("Ressources\\Graphique\\Logo N&B 50%.png").convert_alpha()
                     self.window_game.blit(fond,
-                                     ((((list(self.taille)[0]) / 2) - img_logo50_taille_x / 2), ((list(self.taille)[
-                                         1]) / 2) - img_logo50_taille_y / 2))
+                                     ((((list(self.taille)[0]) / 2) - Constantes.img_logo50_taille_x / 2), ((list(self.taille)[
+                                         1]) / 2) - Constantes.img_logo50_taille_y / 2))
             else:
                 fond = pygame.image.load("Ressources\\Graphique\\Logo N&B 50%.png").convert_alpha()
                 self.window_game.blit(fond,
-                                 ((((list(self.taille)[0]) / 2) - img_logo50_taille_x / 2), ((list(self.taille)[
-                                     1]) / 2) - img_logo50_taille_y / 2))
+                                 ((((list(self.taille)[0]) / 2) - Constantes.img_logo50_taille_x / 2), ((list(self.taille)[
+                                     1]) / 2) - Constantes.img_logo50_taille_y / 2))
 
             # 2) lignes
             graphical_input = []

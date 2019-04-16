@@ -20,8 +20,8 @@ class Circuit:
         self.graphical_output = [self.x, self.y]
 
         if mode == "center":
-            self.x = self.x - (img_circuit_taille_x / 2) + 1
-            self.y = self.y - (img_circuit_taille_y / 2) + 1
+            self.x = self.x - (Constantes.img_circuit_taille_x / 2) + 1
+            self.y = self.y - (Constantes.img_circuit_taille_y / 2) + 1
 
         self.changer_image()
 
@@ -143,17 +143,17 @@ class Circuit:
         """Change l'image en raport avec l'operation"""
         # todo change image operation
         if self.operation == "or":
-            self.image = pygame.image.load(img_circuit_OR).convert_alpha()
+            self.image = pygame.image.load(Constantes.img_circuit_OR).convert_alpha()
         if self.operation == "nor":
-            self.image = pygame.image.load(img_circuit_NOR).convert_alpha()
+            self.image = pygame.image.load(Constantes.img_circuit_NOR).convert_alpha()
         if self.operation == "and":
-            self.image = pygame.image.load(img_circuit_AND).convert_alpha()
+            self.image = pygame.image.load(Constantes.img_circuit_AND).convert_alpha()
         if self.operation == "nand":
-            self.image = pygame.image.load(img_circuit_NAND).convert_alpha()
+            self.image = pygame.image.load(Constantes.img_circuit_NAND).convert_alpha()
         if self.operation == "xor":
-            self.image = pygame.image.load(img_circuit_XOR).convert_alpha()
+            self.image = pygame.image.load(Constantes.img_circuit_XOR).convert_alpha()
         if self.operation == "xnor":
-            self.image = pygame.image.load(img_circuit_XNOR).convert_alpha()
+            self.image = pygame.image.load(Constantes.img_circuit_XNOR).convert_alpha()
 
     def placer(self):
         """Placer sur la surface"""
@@ -166,9 +166,9 @@ class Circuit:
 
     def line_tracer(self, destination_location):
         if self.output == 0:
-            colo = couleur_off
+            colo = Constantes.couleur_off
         else:
-            colo = couleur_on
+            colo = Constantes.couleur_on
         LineMaker(self.fen, self.graphical_output[0], self.graphical_output[1], destination_location[0],
                   destination_location[
             1], colo, 2)
