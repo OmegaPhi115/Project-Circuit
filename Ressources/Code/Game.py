@@ -123,7 +123,7 @@ class Game:
         actu_graph = True
         if actu_graph:
             # 1) fond
-            self.window_game.fill(COL)
+            self.window_game.fill([40, 40, 40])
 
             #quelle fond utilier ?
             if list(self.taille)[0] >= 800:
