@@ -1,4 +1,4 @@
-row_count = 7 + (1 + 1) # number of rows / nombre rangées circuit
+row_count = 3 + (1 + 1) # number of rows / nombre rangées circuit
 
 from Ressources.Code.Fonctions.Music_loader import musique
 from Ressources.Code.Game import Game

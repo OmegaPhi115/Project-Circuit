@@ -13,15 +13,15 @@ class Boutton:
         self.graphical_output = [self.xPos, self.yPos]
 
         if mode == "center":
-            self.xPos = self.xPos - (img_button_taille_x / 2) + 1
-            self.yPos = self.yPos - (img_button_taille_y / 2) + 1
+            self.xPos = self.xPos - (Constantes.img_button_taille_x / 2) + 1
+            self.yPos = self.yPos - (Constantes.img_button_taille_y / 2) + 1
 
         # hitbox:
         self.hitbox_xa = self.xPos  # |                                 a-----|
         self.hitbox_ya = self.yPos  # |                                 |     |
         # |                                                             |     |
-        self.hitbox_xb = img_button_taille_x + self.xPos  # |           |     |
-        self.hitbox_yb = img_button_taille_y + self.yPos  # |           |-----b
+        self.hitbox_xb = Constantes.img_button_taille_x + self.xPos  # |           |     |
+        self.hitbox_yb = Constantes.img_button_taille_y + self.yPos  # |           |-----b
 
         # grafique:
         self.current_image = "none"
@@ -35,9 +35,9 @@ class Boutton:
     def graphisme_update(self):
         """mise a jour des graphismes"""
         if self.state == 0:
-            self.current_image = pygame.image.load(img_button_OFF).convert_alpha()
+            self.current_image = pygame.image.load(Constantes.img_button_OFF).convert_alpha()
         elif self.state == 1:
-            self.current_image = pygame.image.load(img_button_ON).convert_alpha()
+            self.current_image = pygame.image.load(Constantes.img_button_ON).convert_alpha()
 
     def tester_clic(self, x_clic, y_clic):
         if x_clic > self.hitbox_xa:
@@ -78,9 +78,9 @@ class Boutton:
 
     def line_tracer(self, destination_location):
         if self.state == 0:
-            colo = couleur_off
+            colo = Constantes.couleur_off
         else:
-            colo = couleur_on
+            colo = Constantes.couleur_on
         LineMaker(self.fen, self.graphical_output[0], self.graphical_output[1], destination_location[0],
                   destination_location[
             1], colo, 2)
