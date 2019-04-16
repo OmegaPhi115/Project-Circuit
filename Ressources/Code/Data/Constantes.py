@@ -43,6 +43,8 @@ img_screen_taille_y = 40
 #       couleurs
 COLOR_RED = (255, 0, 0)
 COLOR_GREEN = (0, 255, 0)
+COLOR_GRAY_NIGHTMODE = (40, 40, 40)
+
 #       theme
 couleur_off = COLOR_RED
 couleur_on = COLOR_GREEN

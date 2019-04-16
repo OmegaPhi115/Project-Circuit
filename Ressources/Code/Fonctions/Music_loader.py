@@ -1,4 +1,4 @@
-from Ressources.Code.Importations_Globales import *
+from Ressources.Code.Data.Importations_Globales import *
 
 pygame.mixer.init(44100, -16, 2, 4096)
 #todo finish path finder

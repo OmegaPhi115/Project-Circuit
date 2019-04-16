@@ -1,7 +1,7 @@
 """
 crée des lines
 """
-from Ressources.Code.Importations_Globales import *
+from Ressources.Code.Data.Importations_Globales import *
 
 def LineMaker(fen, pointxa, pointya, pointxb, pointyb, color, width=1, fromage="up", to="up"):
     if fromage == "up":

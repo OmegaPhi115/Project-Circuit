@@ -1,5 +1,6 @@
 """J'aurait du commenter"""
-from Ressources.Code.Importations_Globales import *
+
+
 def location_calculs(input_row,taille):
     #output screen_pos, map_circuit, map_bouton
     if input_row <= 1:

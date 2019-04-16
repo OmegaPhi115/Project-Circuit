@@ -1,5 +1,5 @@
 from Ressources.Code.Fonctions.LineMaker import LineMaker
-from Ressources.Code.Importations_Globales import *
+from Ressources.Code.Data.Importations_Globales import *
 
 class Boutton:
     """boutton D'entrée"""

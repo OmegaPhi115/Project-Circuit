@@ -2,7 +2,6 @@ from Ressources.Code.Class.Boutton import Boutton
 from Ressources.Code.Class.Circuit import Circuit
 from Ressources.Code.Class.Screen import Screen
 from Ressources.Code.Fonctions.Location_Calculs import location_calculs
-from Ressources.Code.Importations_Globales import *
 from Ressources.Code.Class.Loading_Animation import *
 
 
@@ -124,7 +123,7 @@ class Game:
         actu_graph = True
         if actu_graph:
             # 1) fond
-            self.window_game.fill([40, 40, 40])
+            self.window_game.fill(COL)
 
             #quelle fond utilier ?
             if list(self.taille)[0] >= 800:

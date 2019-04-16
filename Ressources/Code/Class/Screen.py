@@ -1,4 +1,4 @@
-from Ressources.Code.Importations_Globales import *
+from Ressources.Code.Data.Importations_Globales import *
 
 class Screen:
     def __init__(self, fen, x, y, mode="center"):
